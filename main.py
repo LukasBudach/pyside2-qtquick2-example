@@ -1,10 +1,10 @@
 import os
 import sys
 
-from PySide2.QtCore import QUrl, QObject
+from PySide2.QtCore import QUrl
 from PySide2.QtWidgets import QApplication
 from PySide2.QtQml import QQmlApplicationEngine
-from pyside2_qtquick2_example import resources  # load resources built by pyrcc5
+from res import resources  # load res built by pyrcc5
 
 
 # Set the QtQuick Style
@@ -19,7 +19,7 @@ app = QApplication(sys.argv)
 engine = QQmlApplicationEngine()
 
 # Load the qml file into the engine
-engine.load(QUrl('pyside2_qtquick2_example/qml/main.qml'))
+engine.load(QUrl('res/qml/main.qml'))
 
 # Qml file error handling
 if not engine.rootObjects():
