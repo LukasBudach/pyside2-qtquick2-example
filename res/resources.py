@@ -2,7 +2,7 @@
 
 # Resource object code
 #
-# Created: Di Aug 13 15:38:09 2019
+# Created: Di Aug 13 20:52:55 2019
 #      by: The Resource Compiler for PySide2 (Qt v5.13.0)
 #
 # WARNING! All changes made in this file will be lost!
@@ -64,6 +64,28 @@ e cx=\x2217.5\x22 cy=\x22\
 \x22none\x22 d=\x22M0 0h2\
 4v24H0z\x22/>\x0d\x0a</sv\
 g>\x0d\x0a\
+\x00\x00\x00h\
+i\
+mport QtQuick.Co\
+ntrols 2.4\x0d\x0a\x0d\x0aBu\
+tton {\x0d\x0a  flat: \
+true\x0d\x0a  backgrou\
+nd.anchors.fill:\
+ this\x0d\x0a  spacing\
+: 40\x0d\x0a}\
+\x00\x00\x00\xaa\
+i\
+mport QtQuick.Co\
+ntrols 2.4\x0d\x0aimpo\
+rt QtQuick.Layou\
+ts 1.11\x0d\x0a\x0d\x0aGroup\
+Box {\x0d\x0a  Layout.\
+fillWidth: true\x0d\
+\x0a  Layout.fillHe\
+ight: true\x0d\x0a  La\
+yout.minimumWidt\
+h: 200\x0d\x0a  clip: \
+true\x0d\x0a}\x0d\x0a\
 \x00\x00\x00\xf0\
 i\
 mport QtCharts 2\
@@ -81,29 +103,7 @@ ht: 0\x0d\x0a  theme: \
 ChartView[qtquic\
 kChartsThemes.cu\
 rrentText]\x0d\x0a}\x0d\x0a\
-\x00\x00\x00\xaa\
-i\
-mport QtQuick.Co\
-ntrols 2.4\x0d\x0aimpo\
-rt QtQuick.Layou\
-ts 1.11\x0d\x0a\x0d\x0aGroup\
-Box {\x0d\x0a  Layout.\
-fillWidth: true\x0d\
-\x0a  Layout.fillHe\
-ight: true\x0d\x0a  La\
-yout.minimumWidt\
-h: 200\x0d\x0a  clip: \
-true\x0d\x0a}\x0d\x0a\
-\x00\x00\x00h\
-i\
-mport QtQuick.Co\
-ntrols 2.4\x0d\x0a\x0d\x0aBu\
-tton {\x0d\x0a  flat: \
-true\x0d\x0a  backgrou\
-nd.anchors.fill:\
- this\x0d\x0a  spacing\
-: 40\x0d\x0a}\
-\x00\x00L3\
+\x00\x007\x04\
 i\
 mport QtQuick 2.\
 13\x0d\x0aimport QtQui\
@@ -115,50 +115,23 @@ trols.Material 2\
 .4\x0d\x0aimport QtCha\
 rts 2.2\x0d\x0a\x0d\x0aAppli\
 cationWindow {\x0d\x0a\
-  visible: true\x0d\
-\x0a  minimumHeight\
-: 700\x0d\x0a  minimum\
-Width: 1600\x0d\x0a  M\
-aterial.theme: M\
-aterial[subTheme\
+  title: 'My ama\
+zing neural netw\
+ork app'\x0d\x0a  visi\
+ble: true\x0d\x0a  min\
+imumHeight: 900\x0d\
+\x0a  minimumWidth:\
+ 1600\x0d\x0a  Materia\
+l.theme: Materia\
+l[subTheme.curre\
+ntText]\x0d\x0a  Mater\
+ial.accent: Mate\
+rial[accentColor\
 .currentText]\x0d\x0a \
- Material.accent\
-: Material[accen\
-tColor.currentTe\
-xt]\x0d\x0a  Material.\
-primary: Materia\
-l[primaryColor.c\
-urrentText]\x0d\x0a  m\
-enuBar: MenuBar \
-{\x0d\x0a    Menu {\x0d\x0a \
-     title: '&Fi\
-le'\x0d\x0a      Actio\
-n { text: '&New.\
-..' }\x0d\x0a      Act\
-ion { text: '&Op\
-en...' }\x0d\x0a      \
-Action { text: '\
-&Save' }\x0d\x0a      \
-Action { text: '\
-Save &As...' }\x0d\x0a\
-      MenuSepara\
-tor {}\x0d\x0a      Ac\
-tion { text: '&Q\
-uit' }\x0d\x0a    }\x0d\x0a \
-   Menu {\x0d\x0a     \
- title: '&Edit'\x0d\
-\x0a      Action { \
-text: 'Cu&t' }\x0d\x0a\
-      Action { t\
-ext: '&Copy' }\x0d\x0a\
-      Action { t\
-ext: '&Paste' }\x0d\
-\x0a    }\x0d\x0a    Menu\
- {\x0d\x0a      title:\
- '&Help'\x0d\x0a      \
-Action { text: '\
-&About' }\x0d\x0a    }\
-\x0d\x0a  }\x0d\x0a  header:\
+ Material.primar\
+y: Material[prim\
+aryColor.current\
+Text]\x0d\x0a  header:\
  ToolBar {\x0d\x0a    \
 RowLayout {\x0d\x0a   \
    anchors.fill:\
@@ -172,458 +145,246 @@ Clicked: sideNav\
 .open()\x0d\x0a      }\
 \x0d\x0a      Label {\x0d\
 \x0a        text: '\
-PyQt5 QtQuick2 E\
-xample'\x0d\x0a       \
- elide: Label.El\
-ideRight\x0d\x0a      \
-  horizontalAlig\
-nment: Qt.AlignH\
-Center\x0d\x0a        \
-verticalAlignmen\
-t: Qt.AlignVCent\
-er\x0d\x0a        Layo\
-ut.fillWidth: tr\
-ue\x0d\x0a      }\x0d\x0a   \
-   ToolButton { \
-text: 'Action 1'\
- }\x0d\x0a      ToolBu\
-tton { text: 'Ac\
-tion 2' }\x0d\x0a     \
- ToolSeparator {\
-}\x0d\x0a      ToolBut\
-ton { text: 'Act\
-ion 3' }\x0d\x0a      \
-ToolButton { tex\
-t: 'Action 4' }\x0d\
-\x0a      ToolButto\
-n {\x0d\x0a        ico\
-n.source: '../im\
-ages/baseline-mo\
-re_vert-24px.svg\
-'\x0d\x0a        onCli\
-cked: menu.open(\
-)\x0d\x0a        Menu \
-{\x0d\x0a          id:\
- menu\x0d\x0a         \
- y: parent.heigh\
-t\x0d\x0a          Men\
-uItem { text: 'N\
-ew...' }\x0d\x0a      \
-    MenuItem { t\
-ext: 'Open...' }\
-\x0d\x0a          Menu\
-Item { text: 'Sa\
-ve' }\x0d\x0a        }\
-\x0d\x0a      }\x0d\x0a    }\
-\x0d\x0a  }\x0d\x0a  Drawer \
-{\x0d\x0a    id: sideN\
-av\x0d\x0a    width: 2\
-00\x0d\x0a    height: \
-parent.height\x0d\x0a \
-   ColumnLayout \
-{\x0d\x0a      width: \
-parent.width\x0d\x0a  \
-    Label {\x0d\x0a   \
-       text: 'Dr\
-awer'\x0d\x0a         \
- horizontalAlign\
-ment: Text.Align\
-HCenter\x0d\x0a       \
-   verticalAlign\
-ment: Text.Align\
-VCenter\x0d\x0a       \
-   font.pixelSiz\
-e: 20\x0d\x0a         \
- Layout.fillWidt\
-h: true\x0d\x0a      }\
-\x0d\x0a      Repeater\
- {\x0d\x0a        mode\
-l: 5\x0d\x0a        Si\
-deNavButton {\x0d\x0a \
-         icon.so\
-urce: '../images\
-/baseline-catego\
-ry-24px.svg'\x0d\x0a  \
-        text: 'L\
-ist ' + index\x0d\x0a \
-         Layout.\
-fillWidth: true\x0d\
-\x0a        }\x0d\x0a    \
-  }\x0d\x0a    }\x0d\x0a  }\x0d\
-\x0a  Pane {\x0d\x0a    p\
-adding: 10\x0d\x0a    \
-anchors.fill: pa\
-rent\x0d\x0a    GridLa\
-yout {\x0d\x0a      an\
-chors.fill: pare\
-nt\x0d\x0a      flow: \
-GridLayout.TopTo\
-Bottom\x0d\x0a      ro\
-ws: 2\x0d\x0a      Cel\
-lBox {\x0d\x0a        \
-title: 'Buttons'\
-\x0d\x0a        Column\
-Layout {\x0d\x0a      \
-    anchors.fill\
-: parent\x0d\x0a      \
-    Button {\x0d\x0a  \
-          text: \
-'Button'\x0d\x0a      \
-      Layout.fil\
-lWidth: true\x0d\x0a  \
-          onClic\
-ked: normalPopup\
-.open()\x0d\x0a       \
-   }\x0d\x0a          \
-Button {\x0d\x0a      \
-      text: 'Fla\
-t'\x0d\x0a            \
-Layout.fillWidth\
-: true\x0d\x0a        \
-    flat: true\x0d\x0a\
-            onCl\
-icked: modalPopu\
-p.open()\x0d\x0a      \
-    }\x0d\x0a         \
- Button {\x0d\x0a     \
-       text: 'Hi\
-ghlighted'\x0d\x0a    \
-        Layout.f\
-illWidth: true\x0d\x0a\
-            high\
-lighted: true\x0d\x0a \
-           onCli\
-cked: dialog.ope\
-n()\x0d\x0a          }\
-\x0d\x0a          Roun\
-dButton {\x0d\x0a     \
-       text: '+'\
-\x0d\x0a            La\
-yout.alignment: \
-Qt.AlignHCenter\x0d\
-\x0a          }\x0d\x0a  \
-      }\x0d\x0a      }\
-\x0d\x0a      CellBox \
-{\x0d\x0a        title\
-: 'Radio Buttons\
-'\x0d\x0a        Colum\
-nLayout {\x0d\x0a     \
-     anchors.fil\
-l: parent\x0d\x0a     \
-     RadioButton\
- { text: 'Radio \
-Button 1'; check\
-ed: true }\x0d\x0a    \
-      RadioButto\
-n { text: 'Radio\
- Button 2' }\x0d\x0a  \
-        RadioBut\
-ton { text: 'Rad\
-io Button 3' }\x0d\x0a\
-          RadioB\
-utton { text: 'R\
-adio Button 4' }\
-\x0d\x0a        }\x0d\x0a   \
-   }\x0d\x0a      Cell\
-Box {\x0d\x0a        t\
-itle: 'Check Box\
-es'\x0d\x0a        Col\
-umnLayout {\x0d\x0a   \
-       anchors.f\
-ill: parent\x0d\x0a   \
-       Switch { \
-Layout.alignment\
-: Qt.AlignHCente\
-r }\x0d\x0a          B\
-uttonGroup {\x0d\x0a  \
-          id: ch\
-ildGroup\x0d\x0a      \
-      exclusive:\
- false\x0d\x0a        \
-    checkState: \
-parentBox.checkS\
-tate\x0d\x0a          \
-}\x0d\x0a          Che\
-ckBox {\x0d\x0a       \
-     id: parentB\
-ox\x0d\x0a            \
-text: 'Parent'\x0d\x0a\
-            chec\
-kState: childGro\
-up.checkState\x0d\x0a \
-         }\x0d\x0a    \
-      CheckBox {\
-\x0d\x0a            ch\
-ecked: true\x0d\x0a   \
-         text: '\
-Child 1'\x0d\x0a      \
-      leftPaddin\
-g: indicator.wid\
-th\x0d\x0a            \
-ButtonGroup.grou\
-p: childGroup\x0d\x0a \
-         }\x0d\x0a    \
-      CheckBox {\
-\x0d\x0a            te\
-xt: 'Child 2'\x0d\x0a \
-           leftP\
-adding: indicato\
-r.width\x0d\x0a       \
-     ButtonGroup\
-.group: childGro\
-up\x0d\x0a          }\x0d\
-\x0a        }\x0d\x0a    \
-  }\x0d\x0a      CellB\
-ox {\x0d\x0a        ti\
-tle: 'Progress I\
-ndicators'\x0d\x0a    \
-    ColumnLayout\
- {\x0d\x0a          an\
-chors.fill: pare\
-nt\x0d\x0a          Bu\
-syIndicator {\x0d\x0a \
-           runni\
-ng: true\x0d\x0a      \
-      Layout.ali\
-gnment: Qt.Align\
-HCenter\x0d\x0a       \
-     ToolTip.vis\
-ible: hovered\x0d\x0a \
-           ToolT\
-ip.text: 'Busy I\
-ndicator'\x0d\x0a     \
-     }\x0d\x0a        \
-  DelayButton {\x0d\
-\x0a            tex\
-t: 'Delay Button\
-'\x0d\x0a            d\
-elay: 3000\x0d\x0a    \
-        Layout.f\
-illWidth: true\x0d\x0a\
-          }\x0d\x0a   \
-       ProgressB\
-ar { value: 0.6;\
- Layout.fillWidt\
-h: true }\x0d\x0a     \
-     ProgressBar\
- { indeterminate\
-: true; Layout.f\
-illWidth: true }\
-\x0d\x0a        }\x0d\x0a   \
-   }\x0d\x0a      Cell\
-Box {\x0d\x0a         \
- title: 'ComboBo\
-xes'\x0d\x0a          \
-ColumnLayout {\x0d\x0a\
-              an\
-chors.fill: pare\
-nt\x0d\x0a            \
-  ComboBox {\x0d\x0a  \
-              mo\
-del: ['Normal', \
-'Second', 'Third\
-']\x0d\x0a            \
-    Layout.fillW\
-idth: true\x0d\x0a    \
-          }\x0d\x0a   \
-           Combo\
-Box {\x0d\x0a         \
-       model: ['\
-Flat', 'Second',\
- 'Third']\x0d\x0a     \
-           Layou\
-t.fillWidth: tru\
-e\x0d\x0a             \
-   flat: true\x0d\x0a \
-             }\x0d\x0a\
-              Co\
-mboBox {\x0d\x0a      \
-          model:\
- ['Editable', 'S\
-econd', 'Third']\
-\x0d\x0a              \
+Neural network c\
+ontrol panel'\x0d\x0a \
+       elide: La\
+bel.ElideRight\x0d\x0a\
+        horizont\
+alAlignment: Qt.\
+AlignHCenter\x0d\x0a  \
+      verticalAl\
+ignment: Qt.Alig\
+nVCenter\x0d\x0a      \
   Layout.fillWid\
 th: true\x0d\x0a      \
-          editab\
-le: true\x0d\x0a      \
-        }\x0d\x0a     \
-         ComboBo\
-x {\x0d\x0a           \
-       model: 10\
-\x0d\x0a              \
-    editable: tr\
-ue\x0d\x0a            \
-      validator:\
- IntValidator { \
-top: 9; bottom: \
-0 }\x0d\x0a           \
-       Layout.fi\
-llWidth: true\x0d\x0a \
-             }\x0d\x0a\
-          }\x0d\x0a   \
-   }\x0d\x0a      Cell\
-Box {\x0d\x0a        t\
-itle: 'Range Con\
-trollers'\x0d\x0a     \
-   ColumnLayout \
-{\x0d\x0a          anc\
-hors.fill: paren\
-t\x0d\x0a          Dia\
-l {\x0d\x0a           \
- id: dial\x0d\x0a     \
-       scale: 0.\
-8\x0d\x0a            L\
-ayout.alignment:\
- Qt.AlignHCenter\
-\x0d\x0a            To\
-olTip {\x0d\x0a       \
-       parent: d\
-ial.handle\x0d\x0a    \
-          visibl\
-e: dial.pressed\x0d\
-\x0a              t\
-ext: dial.value.\
-toFixed(2)\x0d\x0a    \
-        }\x0d\x0a     \
-     }\x0d\x0a        \
-  RangeSlider {\x0d\
-\x0a            fir\
-st.value: 0.25; \
-second.value: 0.\
-75; Layout.fillW\
-idth: true\x0d\x0a    \
-        ToolTip.\
-visible: hovered\
-\x0d\x0a            To\
-olTip.text: 'Ran\
-ge Slider'\x0d\x0a    \
-      }\x0d\x0a       \
-   Slider {\x0d\x0a   \
-         id: sli\
-der\x0d\x0a           \
- Layout.fillWidt\
-h: true\x0d\x0a       \
-     ToolTip {\x0d\x0a\
-              pa\
-rent: slider.han\
-dle\x0d\x0a           \
-   visible: slid\
-er.pressed\x0d\x0a    \
-          text: \
-slider.value.toF\
-ixed(2)\x0d\x0a       \
-     }\x0d\x0a        \
-  }\x0d\x0a        }\x0d\x0a\
-      }\x0d\x0a      C\
-ellBox {\x0d\x0a      \
-  title: 'Spin B\
-oxes'\x0d\x0a        C\
-olumnLayout {\x0d\x0a \
-         anchors\
-.fill: parent\x0d\x0a \
-         SpinBox\
- { value: 50; ed\
-itable: true; La\
-yout.fillWidth: \
-true }\x0d\x0a        \
-  SpinBox {\x0d\x0a   \
-         from: 0\
-\x0d\x0a            to\
-: items.length -\
- 1\x0d\x0a            \
-value: 1 // 'Med\
-ium'\x0d\x0a          \
-  property var i\
-tems: ['Small', \
-'Medium', 'Large\
-']\x0d\x0a            \
-validator: RegEx\
-pValidator {\x0d\x0a  \
-            regE\
-xp: new RegExp('\
-(Small|Medium|La\
-rge)', 'i')\x0d\x0a   \
-         }\x0d\x0a    \
-        textFrom\
-Value: function(\
-value) {\x0d\x0a      \
-        return i\
-tems[value];\x0d\x0a  \
-          }\x0d\x0a   \
-         valueFr\
-omText: function\
-(text) {\x0d\x0a      \
-        for (var\
- i = 0; i < item\
-s.length; ++i)\x0d\x0a\
-                \
-if (items[i].toL\
-owerCase().index\
-Of(text.toLowerC\
-ase()) === 0)\x0d\x0a \
-                \
- return i\x0d\x0a     \
-         return \
-sb.value\x0d\x0a      \
-      }\x0d\x0a       \
+}\x0d\x0a      ToolBut\
+ton { text: 'Sta\
+rt Training' }\x0d\x0a\
+      ToolButton\
+ { text: 'Pause \
+Training' }\x0d\x0a   \
+   ToolSeparator\
+ {}\x0d\x0a      ToolB\
+utton {\x0d\x0a       \
+ icon.source: '.\
+./images/baselin\
+e-more_vert-24px\
+.svg'\x0d\x0a        o\
+nClicked: menu.o\
+pen()\x0d\x0a        M\
+enu {\x0d\x0a         \
+ id: menu\x0d\x0a     \
+     y: parent.h\
+eight\x0d\x0a         \
+ MenuItem { text\
+: 'New...' }\x0d\x0a  \
+        MenuItem\
+ { text: 'Open..\
+.' }\x0d\x0a          \
+MenuItem { text:\
+ 'Save' }\x0d\x0a     \
+   }\x0d\x0a      }\x0d\x0a \
+   }\x0d\x0a  }\x0d\x0a  Dra\
+wer {\x0d\x0a    id: s\
+ideNav\x0d\x0a    widt\
+h: 200\x0d\x0a    heig\
+ht: parent.heigh\
+t\x0d\x0a    ColumnLay\
+out {\x0d\x0a      wid\
+th: parent.width\
+\x0d\x0a      Label {\x0d\
+\x0a          text:\
+ 'Drawer'\x0d\x0a     \
+     horizontalA\
+lignment: Text.A\
+lignHCenter\x0d\x0a   \
+       verticalA\
+lignment: Text.A\
+lignVCenter\x0d\x0a   \
+       font.pixe\
+lSize: 20\x0d\x0a     \
      Layout.fill\
 Width: true\x0d\x0a   \
-       }\x0d\x0a      \
-    SpinBox {\x0d\x0a \
-           id: d\
-oubleSpinbox\x0d\x0a  \
-          editab\
-le: true\x0d\x0a      \
-      from: 0\x0d\x0a \
-           value\
-: 110\x0d\x0a         \
-   to: 100 * 100\
-\x0d\x0a            st\
-epSize: 100\x0d\x0a   \
-         propert\
-y int decimals: \
-2\x0d\x0a            p\
-roperty real rea\
-lValue: value / \
-100\x0d\x0a           \
- validator: Doub\
-leValidator {\x0d\x0a \
-             bot\
-tom: Math.min(do\
-ubleSpinbox.from\
-, doubleSpinbox.\
-to)\x0d\x0a           \
-   top:  Math.ma\
-x(doubleSpinbox.\
-from, doubleSpin\
-box.to)\x0d\x0a       \
-     }\x0d\x0a        \
-    textFromValu\
-e: function(valu\
-e, locale) {\x0d\x0a  \
-            retu\
-rn Number(value \
-/ 100).toLocaleS\
-tring(locale, 'f\
-', doubleSpinbox\
-.decimals)\x0d\x0a    \
-        }\x0d\x0a     \
-       valueFrom\
-Text: function(t\
-ext, locale) {\x0d\x0a\
-              re\
-turn Number.from\
-LocaleString(loc\
-ale, text) * 100\
-\x0d\x0a            }\x0d\
-\x0a            Lay\
+   }\x0d\x0a      Repe\
+ater {\x0d\x0a        \
+model: 5\x0d\x0a      \
+  SideNavButton \
+{\x0d\x0a          ico\
+n.source: '../im\
+ages/baseline-ca\
+tegory-24px.svg'\
+\x0d\x0a          text\
+: 'List ' + inde\
+x\x0d\x0a          Lay\
 out.fillWidth: t\
-rue\x0d\x0a          }\
-\x0d\x0a        }\x0d\x0a   \
-   }\x0d\x0a      Cell\
-Box {\x0d\x0a        t\
-itle: 'Text Inpu\
-ts'\x0d\x0a        Col\
+rue\x0d\x0a        }\x0d\x0a\
+      }\x0d\x0a    }\x0d\x0a\
+  }\x0d\x0a  Pane {\x0d\x0a \
+   padding: 10\x0d\x0a\
+    anchors.fill\
+: parent\x0d\x0a    Gr\
+idLayout {\x0d\x0a    \
+  anchors.fill: \
+parent\x0d\x0a      fl\
+ow: GridLayout.T\
+opToBottom\x0d\x0a    \
+  rows: 3\x0d\x0a\x0d\x0a   \
+   CellBox {\x0d\x0a  \
+      title: 'Da\
+tasets'\x0d\x0a       \
+ GridLayout {\x0d\x0a \
+           ancho\
+rs.fill: parent\x0d\
+\x0a            col\
+umns: 3\x0d\x0a       \
+     Label {\x0d\x0a  \
+              te\
+xt: 'Train Datas\
+et'\x0d\x0a           \
+     Layout.alig\
+nment: Qt.AlignH\
+Center\x0d\x0a        \
+    }\x0d\x0a         \
+   TextField {\x0d\x0a\
+                \
+width: parent.wi\
+dth\x0d\x0a           \
+     placeholder\
+Text: 'Train Dat\
+a goes here...'\x0d\
+\x0a               \
+ selectByMouse: \
+true\x0d\x0a          \
+  }\x0d\x0a           \
+ RoundButton {\x0d\x0a\
+                \
+text: '...'\x0d\x0a   \
+             Lay\
+out.alignment: Q\
+t.AlignHCenter\x0d\x0a\
+            }\x0d\x0a\x0d\
+\x0a            Lab\
+el {\x0d\x0a          \
+      text: 'Tes\
+t Dataset'\x0d\x0a    \
+            Layo\
+ut.alignment: Qt\
+.AlignHCenter\x0d\x0a \
+           }\x0d\x0a  \
+          TextFi\
+eld {\x0d\x0a         \
+       width: pa\
+rent.width\x0d\x0a    \
+            plac\
+eholderText: 'Te\
+st Data goes her\
+e...'\x0d\x0a         \
+       selectByM\
+ouse: true\x0d\x0a    \
+        }\x0d\x0a     \
+       RoundButt\
+on {\x0d\x0a          \
+      text: '...\
+'\x0d\x0a             \
+   Layout.alignm\
+ent: Qt.AlignHCe\
+nter\x0d\x0a          \
+  }\x0d\x0a        }\x0d\x0a\
+      }\x0d\x0a\x0d\x0a     \
+ CellBox {\x0d\x0a    \
+    title: 'Netw\
+ork Settings'\x0d\x0a \
+       GridLayou\
+t {\x0d\x0a           \
+ anchors.fill: p\
+arent\x0d\x0a         \
+   columns: 2\x0d\x0a \
+           Label\
+ {\x0d\x0a            \
+    text: 'Total\
+ Training Epochs\
+'\x0d\x0a             \
+   Layout.alignm\
+ent: Qt.AlignHCe\
+nter\x0d\x0a          \
+  }\x0d\x0a           \
+ SpinBox {\x0d\x0a    \
+            id: \
+totalEpochs\x0d\x0a   \
+             edi\
+table: true\x0d\x0a   \
+             val\
+ue: 10\x0d\x0a        \
+        from: 1\x0d\
+\x0a               \
+ to: 999999\x0d\x0a   \
+             Lay\
+out.fillWidth: t\
+rue\x0d\x0a           \
+ }\x0d\x0a\x0d\x0a          \
+  Label {\x0d\x0a     \
+           text:\
+ 'Batch Size'\x0d\x0a \
+               L\
+ayout.alignment:\
+ Qt.AlignHCenter\
+\x0d\x0a            }\x0d\
+\x0a            Spi\
+nBox {\x0d\x0a        \
+        editable\
+: true\x0d\x0a        \
+        value: 3\
+2\x0d\x0a             \
+   from: 2\x0d\x0a    \
+            to: \
+2048\x0d\x0a          \
+      Layout.fil\
+lWidth: true\x0d\x0a  \
+          }\x0d\x0a\x0d\x0a \
+           Label\
+ {\x0d\x0a            \
+    text: 'Neigh\
+borhood Size'\x0d\x0a \
+               L\
+ayout.alignment:\
+ Qt.AlignHCenter\
+\x0d\x0a            }\x0d\
+\x0a            Spi\
+nBox {\x0d\x0a        \
+        editable\
+: true\x0d\x0a        \
+        value: 2\
+048\x0d\x0a           \
+     from: 512\x0d\x0a\
+                \
+to: 8192\x0d\x0a      \
+          Layout\
+.fillWidth: true\
+\x0d\x0a            }\x0d\
+\x0a\x0d\x0a            L\
+abel {\x0d\x0a        \
+        text: 'O\
+ptimization Metr\
+ic'\x0d\x0a           \
+     Layout.alig\
+nment: Qt.AlignH\
+Center\x0d\x0a        \
+    }\x0d\x0a         \
+   SpinBox {\x0d\x0a  \
+              va\
+lue: 100\x0d\x0a      \
+          Layout\
+.fillWidth: true\
+\x0d\x0a            }\x0d\
+\x0a        }\x0d\x0a    \
+  }\x0d\x0a\x0d\x0a      Cel\
+lBox {\x0d\x0a        \
+Layout.columnSpa\
+n: 2; Layout.pre\
+ferredHeight: 10\
+0;\x0d\x0a        titl\
+e: 'Console Outp\
+ut'\x0d\x0a        Col\
 umn {\x0d\x0a         \
  // ScrollView w\
 ill not work if \
@@ -638,693 +399,593 @@ ts.\x0d\x0a          a\
 nchors.fill: par\
 ent\x0d\x0a          s\
 pacing: 10\x0d\x0a    \
-      TextField \
-{\x0d\x0a            w\
-idth: parent.wid\
-th\x0d\x0a            \
-placeholderText:\
- 'Enter somethin\
-g here...'\x0d\x0a    \
-        selectBy\
-Mouse: true\x0d\x0a   \
-       }\x0d\x0a      \
-    TextField {\x0d\
-\x0a            wid\
-th: parent.width\
-\x0d\x0a            te\
-xt: 'read only'\x0d\
-\x0a            rea\
-dOnly: true\x0d\x0a   \
-       }\x0d\x0a      \
-    ScrollView {\
-\x0d\x0a            wi\
-dth: parent.widt\
-h\x0d\x0a            h\
-eight: parent.he\
-ight - y\x0d\x0a      \
-      TextArea {\
+      ScrollView\
+ {\x0d\x0a            \
+width: parent.wi\
+dth\x0d\x0a           \
+ height: 150\x0d\x0a  \
+          TextAr\
+ea {\x0d\x0a          \
+    text: 'Multi\
+-line text edito\
+r...\x5cnThis is a \
+new line.'\x0d\x0a    \
+          select\
+ByMouse: true\x0d\x0a \
+             per\
+sistentSelection\
+: true\x0d\x0a        \
+      readOnly: \
+true\x0d\x0a          \
+  }\x0d\x0a          }\
+\x0d\x0a        }\x0d\x0a   \
+   }\x0d\x0a\x0d\x0a      Ce\
+llBox {\x0d\x0a       \
+   Layout.rowSpa\
+n: 2\x0d\x0a          \
+title: 'Current \
+Info'\x0d\x0a         \
+ ColumnLayout {\x0d\
+\x0a              a\
+nchors.fill: par\
+ent\x0d\x0a\x0d\x0a         \
+     GridLayout \
+{\x0d\x0a             \
+   Layout.alignm\
+ent: Qt.AlignTop\
 \x0d\x0a              \
-placeholderText:\
- 'Multi-line tex\
-t editor...'\x0d\x0a  \
-            sele\
-ctByMouse: true\x0d\
-\x0a              p\
-ersistentSelecti\
-on: true\x0d\x0a      \
-      }\x0d\x0a       \
-   }\x0d\x0a        }\x0d\
-\x0a      }\x0d\x0a      \
+  columns: 2\x0d\x0a\x0d\x0a\
+                \
+Label {\x0d\x0a       \
+             Lay\
+out.fillWidth: t\
+rue\x0d\x0a           \
+         horizon\
+talAlignment: Te\
+xt.AlignLeft\x0d\x0a  \
+                \
+  text: 'Current\
+ Epoch'\x0d\x0a       \
+         }\x0d\x0a    \
+            Labe\
+l {\x0d\x0a           \
+         text: '\
+6'\x0d\x0a            \
+        horizont\
+alAlignment: Tex\
+t.AlignRight\x0d\x0a  \
+                \
+  Layout.fillWid\
+th: true\x0d\x0a      \
+          }\x0d\x0a\x0d\x0a \
+               L\
+abel {\x0d\x0a        \
+            Layo\
+ut.fillWidth: tr\
+ue\x0d\x0a            \
+        horizont\
+alAlignment: Tex\
+t.AlignLeft\x0d\x0a   \
+                \
+ text: 'Train Ac\
+curacy'\x0d\x0a       \
+         }\x0d\x0a    \
+            Labe\
+l {\x0d\x0a           \
+         text: '\
+100%'\x0d\x0a         \
+           horiz\
+ontalAlignment: \
+Text.AlignRight\x0d\
+\x0a               \
+     Layout.fill\
+Width: true\x0d\x0a   \
+             }\x0d\x0a\
+\x0d\x0a              \
+  Label {\x0d\x0a     \
+               L\
+ayout.fillWidth:\
+ true\x0d\x0a         \
+           horiz\
+ontalAlignment: \
+Text.AlignLeft\x0d\x0a\
+                \
+    text: 'Train\
+ Loss'\x0d\x0a        \
+        }\x0d\x0a     \
+           Label\
+ {\x0d\x0a            \
+        text: '0\
+.03'\x0d\x0a          \
+          horizo\
+ntalAlignment: T\
+ext.AlignRight\x0d\x0a\
+                \
+    Layout.fillW\
+idth: true\x0d\x0a    \
+            }\x0d\x0a\x0d\
+\x0a               \
+ Label {\x0d\x0a      \
+              La\
+yout.fillWidth: \
+true\x0d\x0a          \
+          horizo\
+ntalAlignment: T\
+ext.AlignLeft\x0d\x0a \
+                \
+   text: 'Test A\
+ccuracy'\x0d\x0a      \
+          }\x0d\x0a   \
+             Lab\
+el {\x0d\x0a          \
+          text: \
+'95.4%'\x0d\x0a       \
+             hor\
+izontalAlignment\
+: Text.AlignRigh\
+t\x0d\x0a             \
+       Layout.fi\
+llWidth: true\x0d\x0a \
+               }\
+\x0d\x0a\x0d\x0a            \
+    Label {\x0d\x0a   \
+                \
+ Layout.fillWidt\
+h: true\x0d\x0a       \
+             hor\
+izontalAlignment\
+: Text.AlignLeft\
+\x0d\x0a              \
+      text: 'Tes\
+t Loss'\x0d\x0a       \
+         }\x0d\x0a    \
+            Labe\
+l {\x0d\x0a           \
+         text: '\
+0.05'\x0d\x0a         \
+           horiz\
+ontalAlignment: \
+Text.AlignRight\x0d\
+\x0a               \
+     Layout.fill\
+Width: true\x0d\x0a   \
+             }\x0d\x0a\
+\x0d\x0a              \
+  Label {\x0d\x0a     \
+               L\
+ayout.fillWidth:\
+ true\x0d\x0a         \
+           horiz\
+ontalAlignment: \
+Text.AlignLeft\x0d\x0a\
+                \
+    text: 'mAP'\x0d\
+\x0a               \
+ }\x0d\x0a            \
+    Label {\x0d\x0a   \
+                \
+ text: '90%'\x0d\x0a  \
+                \
+  horizontalAlig\
+nment: Text.Alig\
+nRight\x0d\x0a        \
+            Layo\
+ut.fillWidth: tr\
+ue\x0d\x0a            \
+    }\x0d\x0a\x0d\x0a       \
+         Label {\
+\x0d\x0a              \
+      Layout.fil\
+lWidth: true\x0d\x0a  \
+                \
+  horizontalAlig\
+nment: Text.Alig\
+nLeft\x0d\x0a         \
+           text:\
+ 'mIoU'\x0d\x0a       \
+         }\x0d\x0a    \
+            Labe\
+l {\x0d\x0a           \
+         text: '\
+92%'\x0d\x0a          \
+          horizo\
+ntalAlignment: T\
+ext.AlignRight\x0d\x0a\
+                \
+    Layout.fillW\
+idth: true\x0d\x0a    \
+            }\x0d\x0a\x0d\
+\x0a              }\
+\x0d\x0a\x0d\x0a            \
+  GridLayout {\x0d\x0a\
+                \
+  Layout.alignme\
+nt: Qt.AlignBott\
+om\x0d\x0a            \
+      columns: 2\
+\x0d\x0a\x0d\x0a            \
+      Label {\x0d\x0a \
+                \
+     Layout.fill\
+Width: true\x0d\x0a   \
+                \
+   horizontalAli\
+gnment: Text.Ali\
+gnLeft\x0d\x0a        \
+              te\
+xt: 'Epoch Progr\
+ess: '\x0d\x0a        \
+          }\x0d\x0a   \
+               L\
+abel {\x0d\x0a        \
+              te\
+xt: '60%'\x0d\x0a     \
+                \
+ horizontalAlign\
+ment: Text.Align\
+Right\x0d\x0a         \
+             Lay\
+out.fillWidth: t\
+rue\x0d\x0a           \
+       }\x0d\x0a      \
+            Prog\
+ressBar {\x0d\x0a     \
+                \
+ Layout.fillWidt\
+h: true\x0d\x0a       \
+               L\
+ayout.columnSpan\
+: 2\x0d\x0a           \
+           value\
+: 0.6;\x0d\x0a        \
+          }\x0d\x0a   \
+           }\x0d\x0a  \
+        }\x0d\x0a     \
+ }\x0d\x0a\x0d\x0a      /***\
+****************\
+****************\
+****************\
+*******\x0d\x0a      G\
+raphs\x0d\x0a      ***\
+****************\
+****************\
+****************\
+*******/\x0d\x0a      \
 CellBox {\x0d\x0a     \
    Layout.rowSpa\
-n: 2; Layout.min\
+n: 3; Layout.min\
 imumWidth: 700\x0d\x0a\
-        title: '\
-Tabs'\x0d\x0a        L\
-ayout.preferredW\
-idth: height // \
-Keep the ratio r\
-ight!\x0d\x0a        T\
-abBar {\x0d\x0a       \
-   id: bar\x0d\x0a    \
-      width: par\
-ent.width\x0d\x0a     \
-     TabButton {\
- text: 'Area' }\x0d\
-\x0a          TabBu\
-tton { text: 'Ba\
-r' }\x0d\x0a          \
-TabButton { text\
-: 'Box' }\x0d\x0a     \
-     TabButton {\
- text: 'Candlest\
-ick' }\x0d\x0a        \
-  TabButton { te\
-xt: 'Polar' }\x0d\x0a \
+        Layout.p\
+referredWidth: h\
+eight // Keep th\
+e ratio right!\x0d\x0a\
+        TabBar {\
+\x0d\x0a          id: \
+bar\x0d\x0a          w\
+idth: parent.wid\
+th\x0d\x0a          Ta\
+bButton { text: \
+'Test Loss' }\x0d\x0a \
          TabButt\
-on { text: 'Scat\
-ter' }\x0d\x0a        \
-  TabButton { te\
-xt: 'Spine' }\x0d\x0a \
-         TabButt\
-on { text: 'Pie'\
- }\x0d\x0a        }\x0d\x0a \
-       StackLayo\
-ut {\x0d\x0a          \
-width: parent.wi\
-dth\x0d\x0a          h\
-eight: parent.he\
-ight - y\x0d\x0a      \
-    anchors.top:\
- bar.bottom\x0d\x0a   \
-       currentIn\
-dex: bar.current\
-Index\x0d\x0a         \
- LargeChartView \
-{\x0d\x0a            /\
-/ Define x-axis \
-to be used with \
-the series inste\
-ad of default on\
-e\x0d\x0a            V\
-alueAxis {\x0d\x0a    \
-          id: va\
-lueAxisAreaSerie\
-s\x0d\x0a             \
- min: 2000\x0d\x0a    \
-          max: 2\
-011\x0d\x0a           \
-   tickCount: 12\
+on { text: 'Accu\
+racies' }\x0d\x0a     \
+   }\x0d\x0a        St\
+ackLayout {\x0d\x0a   \
+       width: pa\
+rent.width\x0d\x0a    \
+      height: pa\
+rent.height - y\x0d\
+\x0a          ancho\
+rs.top: bar.bott\
+om\x0d\x0a          cu\
+rrentIndex: bar.\
+currentIndex\x0d\x0a  \
+        LargeCha\
+rtView {\x0d\x0a      \
+      ValueAxis \
+{\x0d\x0a             \
+ id: valueAxisLo\
+ssSeries\x0d\x0a      \
+        min: 0\x0d\x0a\
+              ma\
+x: 5\x0d\x0a          \
+    tickCount: 6\
 \x0d\x0a              \
 labelFormat: '%.\
 0f'\x0d\x0a           \
- }\x0d\x0a            \
-AreaSeries {\x0d\x0a  \
-            name\
-: 'The U.S.'\x0d\x0a  \
-            axis\
-X: valueAxisArea\
-Series\x0d\x0a        \
-      upperSerie\
-s: LineSeries {\x0d\
-\x0a               \
- XYPoint { x: 20\
-00; y: 3 }\x0d\x0a    \
-            XYPo\
-int { x: 2001; y\
-: 2 }\x0d\x0a         \
-       XYPoint {\
- x: 2002; y: 1 }\
+ }\x0d\x0a\x0d\x0a          \
+  SplineSeries {\
 \x0d\x0a              \
-  XYPoint { x: 2\
-003; y: 2 }\x0d\x0a   \
-             XYP\
-oint { x: 2004; \
-y: 1 }\x0d\x0a        \
-        XYPoint \
-{ x: 2005; y: 1 \
-}\x0d\x0a             \
-   XYPoint { x: \
-2006; y: 0 }\x0d\x0a  \
-              XY\
-Point { x: 2007;\
- y: 3 }\x0d\x0a       \
-         XYPoint\
- { x: 2008; y: 4\
- }\x0d\x0a            \
-    XYPoint { x:\
- 2009; y: 1 }\x0d\x0a \
-               X\
-YPoint { x: 2010\
-; y: 0 }\x0d\x0a      \
-          XYPoin\
-t { x: 2011; y: \
-1 }\x0d\x0a           \
-   }\x0d\x0a          \
-  }\x0d\x0a           \
- AreaSeries {\x0d\x0a \
-             nam\
-e: 'Russian'\x0d\x0a  \
-            axis\
-X: valueAxisArea\
-Series\x0d\x0a        \
-      upperSerie\
-s: LineSeries {\x0d\
-\x0a               \
- XYPoint { x: 20\
-00; y: 1 }\x0d\x0a    \
-            XYPo\
-int { x: 2001; y\
-: 1 }\x0d\x0a         \
-       XYPoint {\
- x: 2002; y: 1 }\
-\x0d\x0a              \
-  XYPoint { x: 2\
-003; y: 1 }\x0d\x0a   \
-             XYP\
-oint { x: 2004; \
-y: 1 }\x0d\x0a        \
-        XYPoint \
-{ x: 2005; y: 0 \
-}\x0d\x0a             \
-   XYPoint { x: \
-2006; y: 1 }\x0d\x0a  \
-              XY\
-Point { x: 2007;\
- y: 1 }\x0d\x0a       \
-         XYPoint\
- { x: 2008; y: 4\
- }\x0d\x0a            \
-    XYPoint { x:\
- 2009; y: 3 }\x0d\x0a \
-               X\
-YPoint { x: 2010\
-; y: 2 }\x0d\x0a      \
-          XYPoin\
-t { x: 2011; y: \
-1 }\x0d\x0a           \
-   }\x0d\x0a          \
-  }\x0d\x0a           \
- AreaSeries {\x0d\x0a \
-             nam\
-e: 'Taiwan'\x0d\x0a   \
-           axisX\
-: valueAxisAreaS\
-eries\x0d\x0a         \
-     upperSeries\
-: LineSeries {\x0d\x0a\
-                \
-XYPoint { x: 200\
-0; y: 2 }\x0d\x0a     \
+name: 'Test Loss\
+'\x0d\x0a             \
+ axisX: valueAxi\
+sLossSeries\x0d\x0a   \
            XYPoi\
-nt { x: 2001; y:\
- 1 }\x0d\x0a          \
-      XYPoint { \
-x: 2002; y: 0 }\x0d\
-\x0a               \
- XYPoint { x: 20\
-03; y: 3 }\x0d\x0a    \
-            XYPo\
-int { x: 2004; y\
-: 0 }\x0d\x0a         \
-       XYPoint {\
- x: 2005; y: 0 }\
-\x0d\x0a              \
-  XYPoint { x: 2\
-006; y: 1 }\x0d\x0a   \
-             XYP\
-oint { x: 2007; \
-y: 1 }\x0d\x0a        \
-        XYPoint \
-{ x: 2008; y: 0 \
+nt { x: 0; y: 0 \
 }\x0d\x0a             \
+ XYPoint { x: 1;\
+ y: 2.67 }\x0d\x0a    \
+          XYPoin\
+t { x: 2; y: 1.3\
+4 }\x0d\x0a           \
    XYPoint { x: \
-2009; y: 2 }\x0d\x0a  \
-              XY\
-Point { x: 2010;\
- y: 2 }\x0d\x0a       \
-         XYPoint\
- { x: 2011; y: 1\
- }\x0d\x0a            \
-  }\x0d\x0a           \
- }\x0d\x0a          }\x0d\
-\x0a          Large\
-ChartView {\x0d\x0a   \
-         BarSeri\
-es {\x0d\x0a          \
-    axisX: BarCa\
-tegoryAxis {\x0d\x0a  \
-              ca\
-tegories: ['2007\
-', '2008', '2009\
-', '2010', '2011\
-', '2012' ]\x0d\x0a   \
-           }\x0d\x0a  \
-            BarS\
-et { label: 'Bob\
-'; values: [2, 2\
-, 3, 4, 5, 6] }\x0d\
-\x0a              B\
-arSet { label: '\
-Susan'; values: \
-[5, 1, 2, 4, 1, \
-7] }\x0d\x0a          \
-    BarSet { lab\
-el: 'James'; val\
-ues: [3, 5, 8, 1\
-3, 5, 8] }\x0d\x0a    \
-        }\x0d\x0a     \
-     }\x0d\x0a        \
-  LargeChartView\
- {\x0d\x0a            \
-BoxPlotSeries {\x0d\
-\x0a              n\
-ame: 'Income'\x0d\x0a \
-             Box\
-Set { label: 'Ja\
-n'; values: [3, \
-4, 5.1, 6.2, 8.5\
-] }\x0d\x0a           \
-   BoxSet { labe\
-l: 'Feb'; values\
-: [5, 6, 7.5, 8.\
-6, 11.8] }\x0d\x0a    \
-          BoxSet\
- { label: 'Mar';\
- values: [3.2, 5\
-, 5.7, 8, 9.2] }\
-\x0d\x0a              \
-BoxSet { label: \
-'Apr'; values: [\
-3.8, 5, 6.4, 7, \
-8] }\x0d\x0a          \
-    BoxSet { lab\
-el: 'May'; value\
-s: [4, 5, 5.2, 6\
-, 7] }\x0d\x0a        \
-    }\x0d\x0a         \
-   BoxPlotSeries\
- {\x0d\x0a            \
-  name: 'Tax'\x0d\x0a \
-             Box\
-Set { label: 'Ja\
-n'; values: [1.2\
-, 2.1, 3.2, 3.4,\
- 5.5] }\x0d\x0a       \
-       BoxSet { \
-label: 'Feb'; va\
-lues: [2, 2.2, 2\
-.9, 3.6, 6.8] }\x0d\
-\x0a              B\
-oxSet { label: '\
-Mar'; values: [1\
-.2, 2.2, 2.7, 3.\
-9, 5.2] }\x0d\x0a     \
-         BoxSet \
-{ label: 'Apr'; \
-values: [1.8, 2,\
- 2.2, 3, 3.2] }\x0d\
-\x0a              B\
-oxSet { label: '\
-May'; values: [2\
-, 1.9, 2.2, 3, 4\
-] }\x0d\x0a           \
- }\x0d\x0a          }\x0d\
-\x0a          Large\
-ChartView {\x0d\x0a   \
-         Candles\
-tickSeries {\x0d\x0a  \
-            name\
-: 'Acme Ltd.'\x0d\x0a \
-             inc\
-reasingColor: 'g\
-reen'\x0d\x0a         \
-     decreasingC\
-olor: 'red'\x0d\x0a   \
-           Candl\
-estickSet { time\
-stamp: 143570880\
-0000; open: 690;\
- high: 694; low:\
- 599; close: 660\
- }\x0d\x0a            \
-  CandlestickSet\
- { timestamp: 14\
-35795200000; ope\
-n: 669; high: 66\
-9; low: 669; clo\
-se: 669 }\x0d\x0a     \
-         Candles\
-tickSet { timest\
-amp: 14361408000\
-00; open: 485; h\
-igh: 623; low: 4\
-85; close: 600 }\
-\x0d\x0a              \
-CandlestickSet {\
- timestamp: 1436\
-227200000; open:\
- 589; high: 615;\
- low: 377; close\
-: 569 }\x0d\x0a       \
-       Candlesti\
-ckSet { timestam\
-p: 1436313600000\
-; open: 464; hig\
-h: 464; low: 254\
-; close: 254 }\x0d\x0a\
+3; y: 0.51 }\x0d\x0a  \
+            XYPo\
+int { x: 4; y: 0\
+.21 }\x0d\x0a         \
+     XYPoint { x\
+: 5; y: 0.05 }\x0d\x0a\
             }\x0d\x0a \
-         }\x0d\x0a    \
-      PolarChart\
-View {\x0d\x0a        \
-    animationOpt\
-ions: ChartView.\
-SeriesAnimations\
-\x0d\x0a            le\
-gend.visible: fa\
-lse\x0d\x0a           \
- antialiasing: t\
-rue\x0d\x0a           \
- theme: ChartVie\
-w[qtquickChartsT\
-hemes.currentTex\
-t]\x0d\x0a            \
-ValueAxis {\x0d\x0a   \
-           id: a\
-xisAngular\x0d\x0a    \
+         }\x0d\x0a\x0d\x0a  \
+        LargeCha\
+rtView {\x0d\x0a      \
+      ValueAxis \
+{\x0d\x0a             \
+ id: valueAxisSp\
+lineSeries\x0d\x0a    \
           min: 0\
 \x0d\x0a              \
-max: 20\x0d\x0a       \
-       tickCount\
-: 9\x0d\x0a           \
- }\x0d\x0a            \
-ValueAxis {\x0d\x0a   \
-           id: a\
-xisRadial\x0d\x0a     \
-         min: -0\
-.5\x0d\x0a            \
-  max: 1.5\x0d\x0a    \
-        }\x0d\x0a     \
-       SplineSer\
-ies {\x0d\x0a         \
-     id: series1\
-\x0d\x0a              \
-axisAngular: axi\
-sAngular\x0d\x0a      \
-        axisRadi\
-al: axisRadial\x0d\x0a\
-              po\
-intsVisible: tru\
-e\x0d\x0a            }\
-\x0d\x0a            Sc\
-atterSeries {\x0d\x0a \
-             id:\
- series2\x0d\x0a      \
-        axisAngu\
-lar: axisAngular\
-\x0d\x0a              \
-axisRadial: axis\
-Radial\x0d\x0a        \
-      markerSize\
-: 10\x0d\x0a          \
-  }\x0d\x0a          }\
-\x0d\x0a          // A\
-dd data dynamica\
-lly to the serie\
-s\x0d\x0a          Com\
-ponent.onComplet\
-ed: {\x0d\x0a         \
-   for (var i = \
-0; i <= 20; i++)\
+max: 5\x0d\x0a        \
+      tickCount:\
+ 6\x0d\x0a            \
+  labelFormat: '\
+%.0f'\x0d\x0a         \
+   }\x0d\x0a\x0d\x0a        \
+    SplineSeries\
  {\x0d\x0a            \
-  series1.append\
-(i, Math.random(\
-));\x0d\x0a           \
-   series2.appen\
-d(i, Math.random\
-());\x0d\x0a          \
-  }\x0d\x0a          }\
-\x0d\x0a          Larg\
-eChartView {\x0d\x0a  \
-          Scatte\
-rSeries {\x0d\x0a     \
-         name: '\
-Scatter1'\x0d\x0a     \
-         XYPoint\
- { x: 0.51; y: 1\
-.5 }\x0d\x0a          \
-    XYPoint { x:\
- 0.56; y: 1.6 }\x0d\
+  name: 'Test Ac\
+c.'\x0d\x0a           \
+   axisX: valueA\
+xisSplineSeries\x0d\
 \x0a              X\
-YPoint { x: 0.57\
-; y: 1.55 }\x0d\x0a   \
-           XYPoi\
-nt { x: 0.85; y:\
- 1.8 }\x0d\x0a        \
-      XYPoint { \
-x: 0.96; y: 1.6 \
-}\x0d\x0a             \
- XYPoint { x: 0.\
-12; y: 1.3 }\x0d\x0a  \
-            XYPo\
-int { x: 0.52; y\
-: 2.1 }\x0d\x0a       \
-     }\x0d\x0a        \
-    ScatterSerie\
-s {\x0d\x0a           \
-   name: 'Scatte\
-r2'\x0d\x0a           \
-   XYPoint { x: \
-0.4; y: 1.5 }\x0d\x0a \
-             XYP\
-oint { x: 0.9; y\
-: 1.6 }\x0d\x0a       \
-       XYPoint {\
- x: 0.7; y: 1.55\
- }\x0d\x0a            \
-  XYPoint { x: 0\
-.8; y: 1.8 }\x0d\x0a  \
-            XYPo\
-int { x: 0.5; y:\
- 1.6 }\x0d\x0a        \
-      XYPoint { \
-x: 0.1; y: 1.3 }\
-\x0d\x0a              \
-XYPoint { x: 0.6\
-; y: 2.1 }\x0d\x0a    \
-        }\x0d\x0a     \
-     }\x0d\x0a        \
-  LargeChartView\
- {\x0d\x0a            \
-SplineSeries {\x0d\x0a\
-              na\
-me: 'BPM'\x0d\x0a     \
-         XYPoint\
- { x: 0; y: 0.0 \
-}\x0d\x0a             \
- XYPoint { x: 1.\
-1; y: 5.2 }\x0d\x0a   \
-           XYPoi\
-nt { x: 1.9; y: \
-2.4 }\x0d\x0a         \
+YPoint { x: 0; y\
+: 0 }\x0d\x0a         \
      XYPoint { x\
-: 2.1; y: 2.1 }\x0d\
+: 1; y: 0.5 }\x0d\x0a \
+             XYP\
+oint { x: 2; y: \
+0.75 }\x0d\x0a        \
+      XYPoint { \
+x: 3; y: 0.87 }\x0d\
 \x0a              X\
-YPoint { x: 2.9;\
- y: 2.6 }\x0d\x0a     \
-         XYPoint\
- { x: 3.4; y: 2.\
-3 }\x0d\x0a           \
+YPoint { x: 4; y\
+: 0.92 }\x0d\x0a      \
+        XYPoint \
+{ x: 5; y: 0.95 \
+}\x0d\x0a            }\
+\x0d\x0a            Sp\
+lineSeries {\x0d\x0a  \
+            name\
+: 'mAP'\x0d\x0a       \
+       axisX: va\
+lueAxisSplineSer\
+ies\x0d\x0a           \
    XYPoint { x: \
-4.1; y: 3.1 }\x0d\x0a \
-           }\x0d\x0a  \
-        }\x0d\x0a     \
-     LargeChartV\
-iew {\x0d\x0a         \
-   PieSeries {\x0d\x0a\
-              Pi\
-eSlice { label: \
-'eaten'; value: \
-74.7 }\x0d\x0a        \
-      PieSlice {\
- label: 'not yet\
- eaten'; value: \
-5.1 }\x0d\x0a         \
-     PieSlice { \
-label: 'wut?'; v\
-alue: 20.2; expl\
-oded: true }\x0d\x0a  \
+0; y: 0 }\x0d\x0a     \
+         XYPoint\
+ { x: 1; y: 0.45\
+ }\x0d\x0a            \
+  XYPoint { x: 2\
+; y: 0.80 }\x0d\x0a   \
+           XYPoi\
+nt { x: 3; y: 0.\
+78 }\x0d\x0a          \
+    XYPoint { x:\
+ 4; y: 0.85 }\x0d\x0a \
+             XYP\
+oint { x: 5; y: \
+0.90 }\x0d\x0a        \
+    }\x0d\x0a         \
+   SplineSeries \
+{\x0d\x0a             \
+ name: 'mIoU'\x0d\x0a \
+             axi\
+sX: valueAxisSpl\
+ineSeries\x0d\x0a     \
+         XYPoint\
+ { x: 0; y: 0 }\x0d\
+\x0a              X\
+YPoint { x: 1; y\
+: 0.43 }\x0d\x0a      \
+        XYPoint \
+{ x: 2; y: 0.68 \
+}\x0d\x0a             \
+ XYPoint { x: 3;\
+ y: 0.84 }\x0d\x0a    \
+          XYPoin\
+t { x: 4; y: 0.9\
+0 }\x0d\x0a           \
+   XYPoint { x: \
+5; y: 0.92 }\x0d\x0a  \
           }\x0d\x0a   \
        }\x0d\x0a      \
-  }\x0d\x0a      }\x0d\x0a  \
-    Popup {\x0d\x0a   \
-     id: normalP\
-opup\x0d\x0a        Co\
-lumnLayout {\x0d\x0a  \
-        anchors.\
-fill: parent\x0d\x0a  \
-        Label { \
-text: 'Normal Po\
-pup' }\x0d\x0a        \
-  CheckBox { tex\
-t: 'E-mail' }\x0d\x0a \
-         CheckBo\
-x { text: 'Calen\
-dar' }\x0d\x0a        \
-  CheckBox { tex\
-t: 'Contacts' }\x0d\
-\x0a        }\x0d\x0a    \
-  }\x0d\x0a      Popup\
+  }\x0d\x0a      }\x0d\x0a\x0d\x0a\
+      /*********\
+****************\
+****************\
+****************\
+*\x0d\x0a      Pop-Ups\
+\x0d\x0a      ********\
+****************\
+****************\
+****************\
+**/\x0d\x0a      Popup\
  {\x0d\x0a        id: \
-modalPopup\x0d\x0a    \
-    modal: true\x0d\
-\x0a        ColumnL\
-ayout {\x0d\x0a       \
-   anchors.fill:\
- parent\x0d\x0a       \
-   Label { text:\
- 'Modal Popup' }\
-\x0d\x0a          Chec\
-kBox { text: 'E-\
-mail' }\x0d\x0a       \
+normalPopup\x0d\x0a   \
+     ColumnLayou\
+t {\x0d\x0a          a\
+nchors.fill: par\
+ent\x0d\x0a          L\
+abel { text: 'No\
+rmal Popup' }\x0d\x0a \
+         CheckBo\
+x { text: 'E-mai\
+l' }\x0d\x0a          \
+CheckBox { text:\
+ 'Calendar' }\x0d\x0a \
+         CheckBo\
+x { text: 'Conta\
+cts' }\x0d\x0a        \
+}\x0d\x0a      }\x0d\x0a    \
+  Popup {\x0d\x0a     \
+   id: modalPopu\
+p\x0d\x0a        modal\
+: true\x0d\x0a        \
+ColumnLayout {\x0d\x0a\
+          anchor\
+s.fill: parent\x0d\x0a\
+          Label \
+{ text: 'Modal P\
+opup' }\x0d\x0a       \
    CheckBox { te\
-xt: 'Calendar' }\
-\x0d\x0a          Chec\
-kBox { text: 'Co\
-ntacts' }\x0d\x0a     \
-   }\x0d\x0a      }\x0d\x0a \
-     Dialog {\x0d\x0a \
-       id: dialo\
-g\x0d\x0a        title\
-: 'Dialog'\x0d\x0a    \
+xt: 'E-mail' }\x0d\x0a\
+          CheckB\
+ox { text: 'Cale\
+ndar' }\x0d\x0a       \
+   CheckBox { te\
+xt: 'Contacts' }\
+\x0d\x0a        }\x0d\x0a   \
+   }\x0d\x0a      Dial\
+og {\x0d\x0a        id\
+: dialog\x0d\x0a      \
+  title: 'Dialog\
+'\x0d\x0a        Label\
+ { text: 'The st\
+andard dialog.' \
+}\x0d\x0a        foote\
+r: DialogButtonB\
+ox {\x0d\x0a          \
+standardButtons:\
+ DialogButtonBox\
+.Ok | DialogButt\
+onBox.Cancel\x0d\x0a  \
+      }\x0d\x0a      }\
+\x0d\x0a    }\x0d\x0a  }\x0d\x0a\x0d\x0a\
+  /*************\
+****************\
+****************\
+*************\x0d\x0a \
+ Footer\x0d\x0a  *****\
+****************\
+****************\
+****************\
+*****/\x0d\x0a  footer\
+: RowLayout {\x0d\x0a \
+   width: parent\
+.width\x0d\x0a    RowL\
+ayout {\x0d\x0a      L\
+ayout.margins: 1\
+0\x0d\x0a      Layout.\
+alignment: Qt.Al\
+ignHCenter\x0d\x0a    \
+  Label { text: \
+'Theme customiza\
+tion: ' }\x0d\x0a     \
+ Label {\x0d\x0a      \
+  id: qtquick2Th\
+emes\x0d\x0a        ob\
+jectName: 'qtqui\
+ck2Themes'\x0d\x0a    \
+    Layout.fillW\
+idth: true\x0d\x0a    \
+  }\x0d\x0a    }\x0d\x0a    \
+RowLayout {\x0d\x0a   \
+   Layout.margin\
+s: 10\x0d\x0a      Lay\
+out.alignment: Q\
+t.AlignHCenter\x0d\x0a\
+      Label { te\
+xt: 'QtQuick Cha\
+rts Themes: ' }\x0d\
+\x0a      ComboBox \
+{\x0d\x0a        id: q\
+tquickChartsThem\
+es\x0d\x0a        mode\
+l: [\x0d\x0a          \
+'ChartThemeLight\
+', 'ChartThemeBl\
+ueCerulean',\x0d\x0a  \
+        'ChartTh\
+emeDark', 'Chart\
+ThemeBrownSand',\
+\x0d\x0a          'Cha\
+rtThemeBlueNcs',\
+ 'ChartThemeHigh\
+Contrast',\x0d\x0a    \
+      'ChartThem\
+eBlueIcy', 'Char\
+tThemeQt'\x0d\x0a     \
+   ]\x0d\x0a        La\
+yout.fillWidth: \
+true\x0d\x0a        cu\
+rrentIndex: 2\x0d\x0a \
+     }\x0d\x0a    }\x0d\x0a \
+   RowLayout {\x0d\x0a\
+      Layout.mar\
+gins: 10\x0d\x0a      \
+Layout.alignment\
+: Qt.AlignHCente\
+r\x0d\x0a      Label {\
+ text: 'Sub-Them\
+e: ' }\x0d\x0a      Co\
+mboBox {\x0d\x0a      \
+  id: subTheme\x0d\x0a\
+        model: [\
+'Dark', 'Light']\
+\x0d\x0a        Layout\
+.fillWidth: true\
+\x0d\x0a        enable\
+d: true\x0d\x0a      }\
+\x0d\x0a    }\x0d\x0a    Row\
+Layout {\x0d\x0a      \
+property var mat\
+erialColors: [\x0d\x0a\
+        'Red', '\
+Pink', 'Purple',\
+ 'DeepPurple', '\
+Indigo', 'Blue',\
+\x0d\x0a        'Light\
+Blue', 'Cyan', '\
+Teal', 'Green', \
+'LightGreen', 'L\
+ime',\x0d\x0a        '\
+Yellow', 'Amber'\
+, 'Orange', 'Dee\
+pOrange', 'Brown\
+', 'Grey',\x0d\x0a    \
+    'BlueGrey'\x0d\x0a\
+      ]\x0d\x0a      L\
+ayout.margins: 1\
+0\x0d\x0a      Layout.\
+alignment: Qt.Al\
+ignHCenter\x0d\x0a\x0d\x0a  \
     Label { text\
-: 'The standard \
-dialog.' }\x0d\x0a    \
-    footer: Dial\
-ogButtonBox {\x0d\x0a \
-         standar\
-dButtons: Dialog\
-ButtonBox.Ok | D\
-ialogButtonBox.C\
-ancel\x0d\x0a        }\
-\x0d\x0a      }\x0d\x0a    }\
-\x0d\x0a  }\x0d\x0a  footer:\
- RowLayout {\x0d\x0a  \
-  width: parent.\
-width\x0d\x0a    RowLa\
-yout {\x0d\x0a      La\
-yout.margins: 10\
-\x0d\x0a      Layout.a\
-lignment: Qt.Ali\
-gnHCenter\x0d\x0a     \
- Label { text: '\
-Theme customizat\
-ion: ' }\x0d\x0a      \
-Label {\x0d\x0a       \
- id: qtquick2The\
-mes\x0d\x0a        obj\
-ectName: 'qtquic\
-k2Themes'\x0d\x0a     \
+: 'Primary' }\x0d\x0a \
+     ComboBox {\x0d\
+\x0a        id: pri\
+maryColor\x0d\x0a     \
    Layout.fillWi\
 dth: true\x0d\x0a     \
- }\x0d\x0a    }\x0d\x0a    R\
-owLayout {\x0d\x0a    \
-  Layout.margins\
-: 10\x0d\x0a      Layo\
-ut.alignment: Qt\
-.AlignHCenter\x0d\x0a \
-     Label { tex\
-t: 'QtQuick Char\
-ts Themes: ' }\x0d\x0a\
-      ComboBox {\
-\x0d\x0a        id: qt\
-quickChartsTheme\
-s\x0d\x0a        model\
-: [\x0d\x0a          '\
-ChartThemeLight'\
-, 'ChartThemeBlu\
-eCerulean',\x0d\x0a   \
-       'ChartThe\
-meDark', 'ChartT\
-hemeBrownSand',\x0d\
-\x0a          'Char\
-tThemeBlueNcs', \
-'ChartThemeHighC\
-ontrast',\x0d\x0a     \
-     'ChartTheme\
-BlueIcy', 'Chart\
-ThemeQt'\x0d\x0a      \
-  ]\x0d\x0a        Lay\
-out.fillWidth: t\
-rue\x0d\x0a        cur\
-rentIndex: 2\x0d\x0a  \
-    }\x0d\x0a    }\x0d\x0a  \
-  RowLayout {\x0d\x0a \
-     Layout.marg\
-ins: 10\x0d\x0a      L\
-ayout.alignment:\
- Qt.AlignHCenter\
-\x0d\x0a      Label { \
-text: 'Sub-Theme\
-: ' }\x0d\x0a      Com\
-boBox {\x0d\x0a       \
- id: subTheme\x0d\x0a \
-       model: ['\
-Dark', 'Light']\x0d\
-\x0a        Layout.\
-fillWidth: true\x0d\
-\x0a        enabled\
-: true\x0d\x0a      }\x0d\
-\x0a    }\x0d\x0a    RowL\
-ayout {\x0d\x0a      p\
-roperty var mate\
-rialColors: [\x0d\x0a \
-       'Red', 'P\
-ink', 'Purple', \
-'DeepPurple', 'I\
-ndigo', 'Blue',\x0d\
-\x0a        'LightB\
-lue', 'Cyan', 'T\
-eal', 'Green', '\
-LightGreen', 'Li\
-me',\x0d\x0a        'Y\
-ellow', 'Amber',\
- 'Orange', 'Deep\
-Orange', 'Brown'\
-, 'Grey',\x0d\x0a     \
-   'BlueGrey'\x0d\x0a \
-     ]\x0d\x0a      La\
-yout.margins: 10\
-\x0d\x0a      Layout.a\
-lignment: Qt.Ali\
-gnHCenter\x0d\x0a\x0d\x0a   \
-   Label { text:\
- 'Primary' }\x0d\x0a  \
-    ComboBox {\x0d\x0a\
-        id: prim\
-aryColor\x0d\x0a      \
-  Layout.fillWid\
-th: true\x0d\x0a      \
-  enabled: true\x0d\
-\x0a        model: \
-parent.materialC\
-olors\x0d\x0a        c\
-urrentIndex: 6\x0d\x0a\
-      }\x0d\x0a\x0d\x0a     \
- Label { text: '\
-Accent' }\x0d\x0a     \
- ComboBox {\x0d\x0a   \
-     id: accentC\
-olor\x0d\x0a        La\
-yout.fillWidth: \
-true\x0d\x0a        en\
-abled: true\x0d\x0a   \
-     model: pare\
-nt.materialColor\
-s\x0d\x0a        curre\
-ntIndex: 7\x0d\x0a    \
-  }\x0d\x0a    }\x0d\x0a  }\x0d\
-\x0a}\
+   enabled: true\
+\x0d\x0a        model:\
+ parent.material\
+Colors\x0d\x0a        \
+currentIndex: 6\x0d\
+\x0a      }\x0d\x0a\x0d\x0a    \
+  Label { text: \
+'Accent' }\x0d\x0a    \
+  ComboBox {\x0d\x0a  \
+      id: accent\
+Color\x0d\x0a        L\
+ayout.fillWidth:\
+ true\x0d\x0a        e\
+nabled: true\x0d\x0a  \
+      model: par\
+ent.materialColo\
+rs\x0d\x0a        curr\
+entIndex: 7\x0d\x0a   \
+   }\x0d\x0a    }\x0d\x0a  }\
+\x0d\x0a}\
 "
 
 qt_resource_name = b"\
@@ -1355,20 +1016,20 @@ qt_resource_name = b"\
 \x00b\
 \x00a\x00s\x00e\x00l\x00i\x00n\x00e\x00-\x00c\x00a\x00t\x00e\x00g\x00o\x00r\x00y\
 \x00-\x002\x004\x00p\x00x\x00.\x00s\x00v\x00g\
-\x00\x12\
-\x08\xbdU\xfc\
-\x00L\
-\x00a\x00r\x00g\x00e\x00C\x00h\x00a\x00r\x00t\x00V\x00i\x00e\x00w\x00.\x00q\x00m\
-\x00l\
-\x00\x0b\
-\x09\xf8\xd2<\
-\x00C\
-\x00e\x00l\x00l\x00B\x00o\x00x\x00.\x00q\x00m\x00l\
 \x00\x11\
 \x03S\x87\xdc\
 \x00S\
 \x00i\x00d\x00e\x00N\x00a\x00v\x00B\x00u\x00t\x00t\x00o\x00n\x00.\x00q\x00m\x00l\
 \
+\x00\x0b\
+\x09\xf8\xd2<\
+\x00C\
+\x00e\x00l\x00l\x00B\x00o\x00x\x00.\x00q\x00m\x00l\
+\x00\x12\
+\x08\xbdU\xfc\
+\x00L\
+\x00a\x00r\x00g\x00e\x00C\x00h\x00a\x00r\x00t\x00V\x00i\x00e\x00w\x00.\x00q\x00m\
+\x00l\
 \x00\x08\
 \x08\x01Z\x5c\
 \x00m\
@@ -1383,10 +1044,10 @@ qt_resource_struct = b"\
 \x00\x00\x00*\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\
 \x00\x00\x00\x98\x00\x00\x00\x00\x00\x01\x00\x00\x01\xfa\
 \x00\x00\x00\x5c\x00\x00\x00\x00\x00\x01\x00\x00\x00\xcb\
-\x00\x00\x01\x18\x00\x00\x00\x00\x00\x01\x00\x00\x04\x95\
-\x00\x00\x01@\x00\x00\x00\x00\x00\x01\x00\x00\x05\x01\
 \x00\x00\x00\xd2\x00\x00\x00\x00\x00\x01\x00\x00\x02\xf3\
-\x00\x00\x00\xfc\x00\x00\x00\x00\x00\x01\x00\x00\x03\xe7\
+\x00\x00\x01@\x00\x00\x00\x00\x00\x01\x00\x00\x05\x01\
+\x00\x00\x01\x16\x00\x00\x00\x00\x00\x01\x00\x00\x04\x0d\
+\x00\x00\x00\xfa\x00\x00\x00\x00\x00\x01\x00\x00\x03_\
 "
 
 def qInitResources():
