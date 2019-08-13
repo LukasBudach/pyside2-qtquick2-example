@@ -110,5 +110,8 @@ venv.bak/
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# jetbrains
+.idea/*
+
 # pyqt5 qtquick
 *.qmlc

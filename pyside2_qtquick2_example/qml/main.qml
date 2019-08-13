@@ -2,7 +2,6 @@ import QtQuick 2.13
 import QtQuick.Layouts 1.11
 import QtQuick.Controls 2.4
 import QtQuick.Controls.Material 2.4
-import QtQuick.Controls.Universal 2.4
 import QtCharts 2.2
 
 ApplicationWindow {
@@ -12,8 +11,6 @@ ApplicationWindow {
   Material.theme: Material[subTheme.currentText]
   Material.accent: Material[accentColor.currentText]
   Material.primary: Material[primaryColor.currentText]
-  Universal.theme: Universal[subTheme.currentText]
-  Universal.accent: Universal[accentColor.currentText]
   menuBar: MenuBar {
     Menu {
       title: '&File'
@@ -583,7 +580,7 @@ ApplicationWindow {
         id: subTheme
         model: ['Light', 'Dark']
         Layout.fillWidth: true
-        enabled: qtquick2Themes.text == 'Material' || qtquick2Themes.text == 'Universal'
+        enabled: true
       }
     }
     RowLayout {
@@ -593,12 +590,6 @@ ApplicationWindow {
         'Yello', 'Amber', 'Orange', 'DeepOrange', 'Brown', 'Grey',
         'BlueGrey'
       ]
-      property var universalColors: [
-        'Lime', 'Green', 'Emerald', 'Teal', 'Cyan', 'Cobalt',
-        'Indigo', 'Violet', 'Pink', 'Magenta', 'Crimson', 'Red',
-        'Orange', 'Amber', 'Yellow', 'Brown', 'Olive', 'Steel', 'Mauve',
-        'Taupe'
-      ]
       Layout.margins: 10
       Layout.alignment: Qt.AlignHCenter
       Label { text: 'Colors: ' }
@@ -606,9 +597,8 @@ ApplicationWindow {
       ComboBox {
         id: accentColor
         Layout.fillWidth: true
-        enabled: qtquick2Themes.text == 'Material' || qtquick2Themes.text == 'Universal'
+        enabled: true
         model: {
-          if (qtquick2Themes.text == 'Universal') return parent.universalColors
           return parent.materialColors
         }
       }
@@ -616,7 +606,7 @@ ApplicationWindow {
       ComboBox {
         id: primaryColor
         Layout.fillWidth: true
-        enabled: qtquick2Themes.text == 'Material'
+        enabled: true
         model: parent.materialColors
       }
     }
