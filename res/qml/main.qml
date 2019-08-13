@@ -550,6 +550,16 @@ ApplicationWindow {
     RowLayout {
       Layout.margins: 10
       Layout.alignment: Qt.AlignHCenter
+      Label { text: 'Theme customization: ' }
+      Label {
+        id: qtquick2Themes
+        objectName: 'qtquick2Themes'
+        Layout.fillWidth: true
+      }
+    }
+    RowLayout {
+      Layout.margins: 10
+      Layout.alignment: Qt.AlignHCenter
       Label { text: 'QtQuick Charts Themes: ' }
       ComboBox {
         id: qtquickChartsThemes
@@ -560,16 +570,7 @@ ApplicationWindow {
           'ChartThemeBlueIcy', 'ChartThemeQt'
         ]
         Layout.fillWidth: true
-      }
-    }
-    RowLayout {
-      Layout.margins: 10
-      Layout.alignment: Qt.AlignHCenter
-      Label { text: 'QtQuick 2 Themes: ' }
-      Label {
-        id: qtquick2Themes
-        objectName: 'qtquick2Themes'
-        Layout.fillWidth: true
+        currentIndex: 2
       }
     }
     RowLayout {
@@ -578,7 +579,7 @@ ApplicationWindow {
       Label { text: 'Sub-Theme: ' }
       ComboBox {
         id: subTheme
-        model: ['Light', 'Dark']
+        model: ['Dark', 'Light']
         Layout.fillWidth: true
         enabled: true
       }
@@ -587,27 +588,28 @@ ApplicationWindow {
       property var materialColors: [
         'Red', 'Pink', 'Purple', 'DeepPurple', 'Indigo', 'Blue',
         'LightBlue', 'Cyan', 'Teal', 'Green', 'LightGreen', 'Lime',
-        'Yello', 'Amber', 'Orange', 'DeepOrange', 'Brown', 'Grey',
+        'Yellow', 'Amber', 'Orange', 'DeepOrange', 'Brown', 'Grey',
         'BlueGrey'
       ]
       Layout.margins: 10
       Layout.alignment: Qt.AlignHCenter
-      Label { text: 'Colors: ' }
-      Label { text: 'Accent' }
-      ComboBox {
-        id: accentColor
-        Layout.fillWidth: true
-        enabled: true
-        model: {
-          return parent.materialColors
-        }
-      }
+
       Label { text: 'Primary' }
       ComboBox {
         id: primaryColor
         Layout.fillWidth: true
         enabled: true
         model: parent.materialColors
+        currentIndex: 6
+      }
+
+      Label { text: 'Accent' }
+      ComboBox {
+        id: accentColor
+        Layout.fillWidth: true
+        enabled: true
+        model: parent.materialColors
+        currentIndex: 7
       }
     }
   }

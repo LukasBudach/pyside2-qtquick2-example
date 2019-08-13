@@ -2,7 +2,7 @@
 
 # Resource object code
 #
-# Created: Di Aug 13 15:00:49 2019
+# Created: Di Aug 13 15:38:09 2019
 #      by: The Resource Compiler for PySide2 (Qt v5.13.0)
 #
 # WARNING! All changes made in this file will be lost!
@@ -10,6 +10,21 @@
 from PySide2 import QtCore
 
 qt_resource_data = b"\
+\x00\x00\x00\xc7\
+<\
+svg xmlns=\x22http:\
+//www.w3.org/200\
+0/svg\x22 width=\x2224\
+\x22 height=\x2224\x22 vi\
+ewBox=\x220 0 24 24\
+\x22>\x0d\x0a    <path d=\
+\x22M0 0h24v24H0z\x22 \
+fill=\x22none\x22/>\x0d\x0a \
+   <path d=\x22M3 1\
+8h18v-2H3v2zm0-5\
+h18v-2H3v2zm0-7v\
+2h18V6H3z\x22/>\x0d\x0a</\
+svg>\x0d\x0a\
 \x00\x00\x01+\
 <\
 svg xmlns=\x22http:\
@@ -31,21 +46,6 @@ s-.9-2-2-2-2 .9-\
 2s.9 2 2 2 2-.9 \
 2-2-.9-2-2-2z\x22/>\
 \x0d\x0a</svg>\x0d\x0a\
-\x00\x00\x00\xc7\
-<\
-svg xmlns=\x22http:\
-//www.w3.org/200\
-0/svg\x22 width=\x2224\
-\x22 height=\x2224\x22 vi\
-ewBox=\x220 0 24 24\
-\x22>\x0d\x0a    <path d=\
-\x22M0 0h24v24H0z\x22 \
-fill=\x22none\x22/>\x0d\x0a \
-   <path d=\x22M3 1\
-8h18v-2H3v2zm0-5\
-h18v-2H3v2zm0-7v\
-2h18V6H3z\x22/>\x0d\x0a</\
-svg>\x0d\x0a\
 \x00\x00\x00\xf5\
 <\
 svg xmlns=\x22http:\
@@ -64,6 +64,23 @@ e cx=\x2217.5\x22 cy=\x22\
 \x22none\x22 d=\x22M0 0h2\
 4v24H0z\x22/>\x0d\x0a</sv\
 g>\x0d\x0a\
+\x00\x00\x00\xf0\
+i\
+mport QtCharts 2\
+.2\x0d\x0a\x0d\x0aChartView \
+{\x0d\x0a  animationOp\
+tions: ChartView\
+.SeriesAnimation\
+s\x0d\x0a  antialiasin\
+g: true\x0d\x0a  margi\
+ns.top: 0\x0d\x0a  mar\
+gins.bottom: 0\x0d\x0a\
+  margins.left: \
+0\x0d\x0a  margins.rig\
+ht: 0\x0d\x0a  theme: \
+ChartView[qtquic\
+kChartsThemes.cu\
+rrentText]\x0d\x0a}\x0d\x0a\
 \x00\x00\x00\xaa\
 i\
 mport QtQuick.Co\
@@ -86,24 +103,7 @@ true\x0d\x0a  backgrou\
 nd.anchors.fill:\
  this\x0d\x0a  spacing\
 : 40\x0d\x0a}\
-\x00\x00\x00\xf0\
-i\
-mport QtCharts 2\
-.2\x0d\x0a\x0d\x0aChartView \
-{\x0d\x0a  animationOp\
-tions: ChartView\
-.SeriesAnimation\
-s\x0d\x0a  antialiasin\
-g: true\x0d\x0a  margi\
-ns.top: 0\x0d\x0a  mar\
-gins.bottom: 0\x0d\x0a\
-  margins.left: \
-0\x0d\x0a  margins.rig\
-ht: 0\x0d\x0a  theme: \
-ChartView[qtquic\
-kChartsThemes.cu\
-rrentText]\x0d\x0a}\x0d\x0a\
-\x00\x00L!\
+\x00\x00L3\
 i\
 mport QtQuick 2.\
 13\x0d\x0aimport QtQui\
@@ -1218,112 +1218,113 @@ yout.margins: 10\
 lignment: Qt.Ali\
 gnHCenter\x0d\x0a     \
  Label { text: '\
-QtQuick Charts T\
-hemes: ' }\x0d\x0a    \
-  ComboBox {\x0d\x0a  \
-      id: qtquic\
-kChartsThemes\x0d\x0a \
-       model: [\x0d\
-\x0a          'Char\
-tThemeLight', 'C\
-hartThemeBlueCer\
-ulean',\x0d\x0a       \
-   'ChartThemeDa\
-rk', 'ChartTheme\
-BrownSand',\x0d\x0a   \
-       'ChartThe\
-meBlueNcs', 'Cha\
-rtThemeHighContr\
-ast',\x0d\x0a         \
- 'ChartThemeBlue\
-Icy', 'ChartThem\
-eQt'\x0d\x0a        ]\x0d\
-\x0a        Layout.\
-fillWidth: true\x0d\
-\x0a      }\x0d\x0a    }\x0d\
-\x0a    RowLayout {\
-\x0d\x0a      Layout.m\
-argins: 10\x0d\x0a    \
-  Layout.alignme\
-nt: Qt.AlignHCen\
-ter\x0d\x0a      Label\
- { text: 'QtQuic\
-k 2 Themes: ' }\x0d\
-\x0a      Label {\x0d\x0a\
-        id: qtqu\
-ick2Themes\x0d\x0a    \
-    objectName: \
-'qtquick2Themes'\
-\x0d\x0a        Layout\
-.fillWidth: true\
-\x0d\x0a      }\x0d\x0a    }\
-\x0d\x0a    RowLayout \
-{\x0d\x0a      Layout.\
-margins: 10\x0d\x0a   \
-   Layout.alignm\
-ent: Qt.AlignHCe\
-nter\x0d\x0a      Labe\
-l { text: 'Sub-T\
-heme: ' }\x0d\x0a     \
- ComboBox {\x0d\x0a   \
-     id: subThem\
-e\x0d\x0a        model\
-: ['Light', 'Dar\
-k']\x0d\x0a        Lay\
-out.fillWidth: t\
-rue\x0d\x0a        ena\
-bled: true\x0d\x0a    \
-  }\x0d\x0a    }\x0d\x0a    \
-RowLayout {\x0d\x0a   \
-   property var \
-materialColors: \
-[\x0d\x0a        'Red'\
-, 'Pink', 'Purpl\
-e', 'DeepPurple'\
-, 'Indigo', 'Blu\
-e',\x0d\x0a        'Li\
-ghtBlue', 'Cyan'\
-, 'Teal', 'Green\
-', 'LightGreen',\
- 'Lime',\x0d\x0a      \
-  'Yello', 'Ambe\
-r', 'Orange', 'D\
-eepOrange', 'Bro\
-wn', 'Grey',\x0d\x0a  \
-      'BlueGrey'\
-\x0d\x0a      ]\x0d\x0a     \
- Layout.margins:\
- 10\x0d\x0a      Layou\
-t.alignment: Qt.\
-AlignHCenter\x0d\x0a  \
-    Label { text\
-: 'Colors: ' }\x0d\x0a\
-      Label { te\
-xt: 'Accent' }\x0d\x0a\
-      ComboBox {\
-\x0d\x0a        id: ac\
-centColor\x0d\x0a     \
+Theme customizat\
+ion: ' }\x0d\x0a      \
+Label {\x0d\x0a       \
+ id: qtquick2The\
+mes\x0d\x0a        obj\
+ectName: 'qtquic\
+k2Themes'\x0d\x0a     \
    Layout.fillWi\
 dth: true\x0d\x0a     \
-   enabled: true\
-\x0d\x0a        model:\
- {\x0d\x0a          re\
-turn parent.mate\
-rialColors\x0d\x0a    \
-    }\x0d\x0a      }\x0d\x0a\
-      Label { te\
-xt: 'Primary' }\x0d\
-\x0a      ComboBox \
-{\x0d\x0a        id: p\
-rimaryColor\x0d\x0a   \
-     Layout.fill\
-Width: true\x0d\x0a   \
-     enabled: tr\
-ue\x0d\x0a        mode\
-l: parent.materi\
-alColors\x0d\x0a      \
-}\x0d\x0a    }\x0d\x0a  }\x0d\x0a}\
-\
+ }\x0d\x0a    }\x0d\x0a    R\
+owLayout {\x0d\x0a    \
+  Layout.margins\
+: 10\x0d\x0a      Layo\
+ut.alignment: Qt\
+.AlignHCenter\x0d\x0a \
+     Label { tex\
+t: 'QtQuick Char\
+ts Themes: ' }\x0d\x0a\
+      ComboBox {\
+\x0d\x0a        id: qt\
+quickChartsTheme\
+s\x0d\x0a        model\
+: [\x0d\x0a          '\
+ChartThemeLight'\
+, 'ChartThemeBlu\
+eCerulean',\x0d\x0a   \
+       'ChartThe\
+meDark', 'ChartT\
+hemeBrownSand',\x0d\
+\x0a          'Char\
+tThemeBlueNcs', \
+'ChartThemeHighC\
+ontrast',\x0d\x0a     \
+     'ChartTheme\
+BlueIcy', 'Chart\
+ThemeQt'\x0d\x0a      \
+  ]\x0d\x0a        Lay\
+out.fillWidth: t\
+rue\x0d\x0a        cur\
+rentIndex: 2\x0d\x0a  \
+    }\x0d\x0a    }\x0d\x0a  \
+  RowLayout {\x0d\x0a \
+     Layout.marg\
+ins: 10\x0d\x0a      L\
+ayout.alignment:\
+ Qt.AlignHCenter\
+\x0d\x0a      Label { \
+text: 'Sub-Theme\
+: ' }\x0d\x0a      Com\
+boBox {\x0d\x0a       \
+ id: subTheme\x0d\x0a \
+       model: ['\
+Dark', 'Light']\x0d\
+\x0a        Layout.\
+fillWidth: true\x0d\
+\x0a        enabled\
+: true\x0d\x0a      }\x0d\
+\x0a    }\x0d\x0a    RowL\
+ayout {\x0d\x0a      p\
+roperty var mate\
+rialColors: [\x0d\x0a \
+       'Red', 'P\
+ink', 'Purple', \
+'DeepPurple', 'I\
+ndigo', 'Blue',\x0d\
+\x0a        'LightB\
+lue', 'Cyan', 'T\
+eal', 'Green', '\
+LightGreen', 'Li\
+me',\x0d\x0a        'Y\
+ellow', 'Amber',\
+ 'Orange', 'Deep\
+Orange', 'Brown'\
+, 'Grey',\x0d\x0a     \
+   'BlueGrey'\x0d\x0a \
+     ]\x0d\x0a      La\
+yout.margins: 10\
+\x0d\x0a      Layout.a\
+lignment: Qt.Ali\
+gnHCenter\x0d\x0a\x0d\x0a   \
+   Label { text:\
+ 'Primary' }\x0d\x0a  \
+    ComboBox {\x0d\x0a\
+        id: prim\
+aryColor\x0d\x0a      \
+  Layout.fillWid\
+th: true\x0d\x0a      \
+  enabled: true\x0d\
+\x0a        model: \
+parent.materialC\
+olors\x0d\x0a        c\
+urrentIndex: 6\x0d\x0a\
+      }\x0d\x0a\x0d\x0a     \
+ Label { text: '\
+Accent' }\x0d\x0a     \
+ ComboBox {\x0d\x0a   \
+     id: accentC\
+olor\x0d\x0a        La\
+yout.fillWidth: \
+true\x0d\x0a        en\
+abled: true\x0d\x0a   \
+     model: pare\
+nt.materialColor\
+s\x0d\x0a        curre\
+ntIndex: 7\x0d\x0a    \
+  }\x0d\x0a    }\x0d\x0a  }\x0d\
+\x0a}\
 "
 
 qt_resource_name = b"\
@@ -1339,21 +1340,26 @@ qt_resource_name = b"\
 \x07\x03}\xc3\
 \x00i\
 \x00m\x00a\x00g\x00e\x00s\
-\x00\x1b\
-\x0d\xe1;G\
-\x00b\
-\x00a\x00s\x00e\x00l\x00i\x00n\x00e\x00-\x00m\x00o\x00r\x00e\x00_\x00v\x00e\x00r\
-\x00t\x00-\x002\x004\x00p\x00x\x00.\x00s\x00v\x00g\
 \x00\x16\
 \x03d\xbe\x87\
 \x00b\
 \x00a\x00s\x00e\x00l\x00i\x00n\x00e\x00-\x00m\x00e\x00n\x00u\x00-\x002\x004\x00p\
 \x00x\x00.\x00s\x00v\x00g\
+\x00\x1b\
+\x0d\xe1;G\
+\x00b\
+\x00a\x00s\x00e\x00l\x00i\x00n\x00e\x00-\x00m\x00o\x00r\x00e\x00_\x00v\x00e\x00r\
+\x00t\x00-\x002\x004\x00p\x00x\x00.\x00s\x00v\x00g\
 \x00\x1a\
 \x0b\xaf\xda'\
 \x00b\
 \x00a\x00s\x00e\x00l\x00i\x00n\x00e\x00-\x00c\x00a\x00t\x00e\x00g\x00o\x00r\x00y\
 \x00-\x002\x004\x00p\x00x\x00.\x00s\x00v\x00g\
+\x00\x12\
+\x08\xbdU\xfc\
+\x00L\
+\x00a\x00r\x00g\x00e\x00C\x00h\x00a\x00r\x00t\x00V\x00i\x00e\x00w\x00.\x00q\x00m\
+\x00l\
 \x00\x0b\
 \x09\xf8\xd2<\
 \x00C\
@@ -1363,11 +1369,6 @@ qt_resource_name = b"\
 \x00S\
 \x00i\x00d\x00e\x00N\x00a\x00v\x00B\x00u\x00t\x00t\x00o\x00n\x00.\x00q\x00m\x00l\
 \
-\x00\x12\
-\x08\xbdU\xfc\
-\x00L\
-\x00a\x00r\x00g\x00e\x00C\x00h\x00a\x00r\x00t\x00V\x00i\x00e\x00w\x00.\x00q\x00m\
-\x00l\
 \x00\x08\
 \x08\x01Z\x5c\
 \x00m\
@@ -1379,13 +1380,13 @@ qt_resource_struct = b"\
 \x00\x00\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\
 \x00\x00\x00\x0c\x00\x02\x00\x00\x00\x04\x00\x00\x00\x07\
 \x00\x00\x00\x18\x00\x02\x00\x00\x00\x03\x00\x00\x00\x04\
-\x00\x00\x00f\x00\x00\x00\x00\x00\x01\x00\x00\x01/\
-\x00\x00\x00\x98\x00\x00\x00\x00\x00\x01\x00\x00\x01\xfa\
 \x00\x00\x00*\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\
-\x00\x00\x00\xee\x00\x00\x00\x00\x00\x01\x00\x00\x03\xa1\
+\x00\x00\x00\x98\x00\x00\x00\x00\x00\x01\x00\x00\x01\xfa\
+\x00\x00\x00\x5c\x00\x00\x00\x00\x00\x01\x00\x00\x00\xcb\
+\x00\x00\x01\x18\x00\x00\x00\x00\x00\x01\x00\x00\x04\x95\
 \x00\x00\x01@\x00\x00\x00\x00\x00\x01\x00\x00\x05\x01\
-\x00\x00\x01\x16\x00\x00\x00\x00\x00\x01\x00\x00\x04\x0d\
 \x00\x00\x00\xd2\x00\x00\x00\x00\x00\x01\x00\x00\x02\xf3\
+\x00\x00\x00\xfc\x00\x00\x00\x00\x00\x01\x00\x00\x03\xe7\
 "
 
 def qInitResources():
