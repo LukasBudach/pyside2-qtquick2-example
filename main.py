@@ -2,6 +2,7 @@ import os
 import sys
 
 import time
+import math
 
 from PySide2.QtCore import QUrl, QObject, Signal, Slot, Property, QCoreApplication
 from PySide2.QtWidgets import QApplication
@@ -12,19 +13,32 @@ from res import resources  # load res built by pyrcc5
 class EpochBridge(QObject):
     def __init__(self, parent=None):
         super(EpochBridge, self).__init__(parent)
-        self._train_acc = '0 %'
+        self._test_acc = 0
+        self._test_loss = 0
         self._epoch = 0
         self._progress = 0
 
-    def _train_acc(self):
-        return self._train_acc
+    test_acc_changed = Signal(float, name='test_acc_changed')
 
-    def set_train_acc(self, v):
-        self._train_acc = str(v) + ' %'
+    @Property(float, notify=test_acc_changed)
+    def test_accuracy(self):
+        return self._test_acc
 
-    @Signal
-    def train_acc_changed(self, v):
-        pass
+    @test_accuracy.setter
+    def set_test_accuracy(self, v):
+        self._test_acc = v
+        self.test_acc_changed.emit(v)
+
+    test_loss_changed = Signal(float, name='test_loss_changed')
+
+    @Property(float, notify=test_loss_changed)
+    def test_loss(self):
+        return self._test_loss
+
+    @test_loss.setter
+    def set_test_loss(self, v):
+        self._test_loss = math.trunc(v * 100) / 100.0
+        self.test_loss_changed.emit(v)
 
     epoch_changed = Signal(int, name='epoch_changed')
 
@@ -38,7 +52,6 @@ class EpochBridge(QObject):
             return
         self._epoch = v
         self.epoch_changed.emit(v)
-        print('Epoch: ' + str(v))
 
     progress_changed = Signal(int, name='progress_changed')
 
@@ -52,27 +65,23 @@ class EpochBridge(QObject):
             return
         self._progress = v
         self.progress_changed.emit(v)
-        print('Progress: ' + str(v))
-
-    train_acc = Property(str, _train_acc, set_train_acc, notify=train_acc_changed)
 
 
 class SettingsBridge(QObject):
     def __init__(self, parent=None):
         super(SettingsBridge, self).__init__(parent)
-        self._epochs = 10
+        self._epochs = 5
 
-    def _epochs(self):
+    epochs_changed = Signal(int, name='epochs_changed')
+
+    @Property(int, notify=epochs_changed)
+    def epochs(self):
         return self._epochs
 
+    @epochs.setter
     def set_epochs(self, v):
         self._epochs = v
-
-    @Signal
-    def epochs_changed(self):
-        pass
-
-    epochs = Property(int, _epochs, set_epochs, notify=epochs_changed)
+        self.epochs_changed.emit(v)
 
 
 class ControlBridge(QObject):
@@ -81,14 +90,21 @@ class ControlBridge(QObject):
         self.epoch_bridge = epoch_bridge
         self.settings_bridge = settings_bridge
 
+    epoch_done = Signal(int, float, name='epoch_done')
+    log_event = Signal(str, name='log_event')
+
     @Slot()
     def start_simulation(self):
-        for i in range(self.settings_bridge.epochs):
+        for i in range(1, (self.settings_bridge.epochs + 1)):
             self.epoch_bridge.epoch = i
             for j in range(101):
                 self.epoch_bridge.progress = j
                 QCoreApplication.processEvents()
-                time.sleep(0.25)
+                time.sleep(0.01)
+            self.epoch_bridge.test_accuracy = min((i*i) * 3.978, 100)
+            self.epoch_bridge.test_loss = 1/i
+            self.epoch_done.emit(self.epoch_bridge.epoch, self.epoch_bridge.test_loss)
+            self.log_event.emit('Epoch ' + str(i) + ' done')
 
 # Set the QtQuick Style
 # Acceptable values: Default, Fusion, Imagine, Material, Universal.

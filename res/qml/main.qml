@@ -5,6 +5,7 @@ import QtQuick.Controls.Material 2.4
 import QtCharts 2.2
 
 ApplicationWindow {
+  id: mainWindow
   title: 'My amazing neural network app'
   visible: true
   minimumHeight: 900
@@ -12,6 +13,22 @@ ApplicationWindow {
   Material.theme: Material[subTheme.currentText]
   Material.accent: Material[accentColor.currentText]
   Material.primary: Material[primaryColor.currentText]
+
+  signal lossreemitted(int epoch, double loss)
+  signal consolereemitted(string log)
+
+  Component.onCompleted: {
+      control_bridge.epoch_done.connect(mainWindow.lossreemitted)
+      control_bridge.log_event.connect(mainWindow.consolereemitted)
+  }
+  onLossreemitted: {
+      yAxisLossSeries.max = Math.max(yAxisLossSeries.max, loss)
+      yAxisLossSeries.min = Math.min(yAxisLossSeries.min, loss)
+      lossSeries.append(epoch, loss)
+  }
+  onConsolereemitted: {
+      consoleTextfield.append(log)
+  }
 
   header: ToolBar {
     RowLayout {
@@ -31,8 +48,8 @@ ApplicationWindow {
         text: 'Start Training'
         id: btn_startTraining
         onClicked: () => {
-            control_bridge.start_simulation()
             btn_startTraining.enabled = false
+            control_bridge.start_simulation()
         }
       }
       ToolButton { text: 'Pause Training' }
@@ -174,21 +191,15 @@ ApplicationWindow {
       CellBox {
         Layout.columnSpan: 2; Layout.preferredHeight: 100;
         title: 'Console Output'
-        Column {
-          // ScrollView will not work if we use ColumnLayout as
-          // ColumnLayout always measures its size depending on its
-          // contents.
+        ScrollView {
           anchors.fill: parent
-          spacing: 10
-          ScrollView {
-            width: parent.width
-            height: 150
-            TextArea {
-              text: 'Multi-line text editor...\nThis is a new line.'
-              selectByMouse: true
-              persistentSelection: true
-              readOnly: true
-            }
+          TextArea {
+            anchors.fill: parent
+            id: consoleTextfield
+            placeholderText: 'Console output...'
+            selectByMouse: true
+            persistentSelection: true
+            readOnly: true
           }
         }
       }
@@ -220,7 +231,7 @@ ApplicationWindow {
                     text: 'Train Accuracy'
                 }
                 Label {
-                    text: epoch_bridge.train_acc
+                    text: '0 %'
                     horizontalAlignment: Text.AlignRight
                     Layout.fillWidth: true
                 }
@@ -231,7 +242,7 @@ ApplicationWindow {
                     text: 'Train Loss'
                 }
                 Label {
-                    text: '0.03'
+                    text: '0.00'
                     horizontalAlignment: Text.AlignRight
                     Layout.fillWidth: true
                 }
@@ -242,7 +253,7 @@ ApplicationWindow {
                     text: 'Test Accuracy'
                 }
                 Label {
-                    text: '95.4%'
+                    text: epoch_bridge.test_accuracy + ' %'
                     horizontalAlignment: Text.AlignRight
                     Layout.fillWidth: true
                 }
@@ -253,7 +264,7 @@ ApplicationWindow {
                     text: 'Test Loss'
                 }
                 Label {
-                    text: '0.05'
+                    text: epoch_bridge.test_loss
                     horizontalAlignment: Text.AlignRight
                     Layout.fillWidth: true
                 }
@@ -325,22 +336,24 @@ ApplicationWindow {
           currentIndex: bar.currentIndex
           LargeChartView {
             ValueAxis {
-              id: valueAxisLossSeries
+              id: xAxisLossSeries
+              titleText: 'Epoch'
               min: 0
-              max: 5
-              tickCount: 6
+              max: settings_bridge.epochs
+              tickCount: settings_bridge.epochs + 1
               labelFormat: '%.0f'
+            }
+            ValueAxis {
+              id: yAxisLossSeries
+              min: 0
+              max: 0.5
             }
 
             SplineSeries {
               name: 'Test Loss'
-              axisX: valueAxisLossSeries
-              XYPoint { x: 0; y: 0 }
-              XYPoint { x: 1; y: 2.67 }
-              XYPoint { x: 2; y: 1.34 }
-              XYPoint { x: 3; y: 0.51 }
-              XYPoint { x: 4; y: 0.21 }
-              XYPoint { x: 5; y: 0.05 }
+              id: lossSeries
+              axisX: xAxisLossSeries
+              axisY: yAxisLossSeries
             }
           }
 
