@@ -14,6 +14,7 @@ python main.py
 #### Material (Light)
 
 As of 08/14/2019
+![Material (Light)](https://user-images.githubusercontent.com/38383837/63029856-92080a00-beb1-11e9-937e-391932fa7a71.png)
 
 #### Material (Dark)
 
