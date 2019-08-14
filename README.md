@@ -1,5 +1,10 @@
 # Example for a Neural Network GUI using PySide2
 
+Install requirements by navigating to the root directory of the project and running:
+``` sh
+pip install -r requirements.txt
+```
+
 In order to execute run:
 ``` sh
 pyside2-rcc -o res/resources.py resources.qrc
