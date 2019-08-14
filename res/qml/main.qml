@@ -12,6 +12,7 @@ ApplicationWindow {
   Material.theme: Material[subTheme.currentText]
   Material.accent: Material[accentColor.currentText]
   Material.primary: Material[primaryColor.currentText]
+
   header: ToolBar {
     RowLayout {
       anchors.fill: parent
@@ -26,7 +27,14 @@ ApplicationWindow {
         verticalAlignment: Qt.AlignVCenter
         Layout.fillWidth: true
       }
-      ToolButton { text: 'Start Training' }
+      ToolButton {
+        text: 'Start Training'
+        id: btn_startTraining
+        onClicked: () => {
+            control_bridge.start_simulation()
+            btn_startTraining.enabled = false
+        }
+      }
       ToolButton { text: 'Pause Training' }
       ToolSeparator {}
       ToolButton {
@@ -120,10 +128,12 @@ ApplicationWindow {
             SpinBox {
                 id: totalEpochs
                 editable: true
-                value: 10
+                value: settings_bridge.epochs
                 from: 1
                 to: 999999
                 Layout.fillWidth: true
+                onValueChanged: settings_bridge.epochs = value
+                Component.onCompleted: settings_bridge.epochs = value
             }
 
             Label {
@@ -199,7 +209,7 @@ ApplicationWindow {
                     text: 'Current Epoch'
                 }
                 Label {
-                    text: '6'
+                    text: epoch_bridge.epoch
                     horizontalAlignment: Text.AlignRight
                     Layout.fillWidth: true
                 }
@@ -210,7 +220,7 @@ ApplicationWindow {
                     text: 'Train Accuracy'
                 }
                 Label {
-                    text: '100%'
+                    text: epoch_bridge.train_acc
                     horizontalAlignment: Text.AlignRight
                     Layout.fillWidth: true
                 }
@@ -282,14 +292,15 @@ ApplicationWindow {
                       text: 'Epoch Progress: '
                   }
                   Label {
-                      text: '60%'
+                      text: epoch_bridge.progress
                       horizontalAlignment: Text.AlignRight
                       Layout.fillWidth: true
+                      id: progressLabel
                   }
                   ProgressBar {
                       Layout.fillWidth: true
                       Layout.columnSpan: 2
-                      value: 0.6;
+                      value: epoch_bridge.progress / 100;
                   }
               }
           }
