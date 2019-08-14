@@ -13,8 +13,9 @@ python main.py
 
 #### Material (Light)
 
-![Material (Light)](https://i.imgur.com/KozSAN1.png)
+As of 08/14/2019
 
 #### Material (Dark)
 
-![Material (Dark)](https://i.imgur.com/QN8YUZW.png)
+As of 08/14/2019
+![Material (Dark)](https://imgur.com/a/VtDgOse)
