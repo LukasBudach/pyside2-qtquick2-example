@@ -3,6 +3,7 @@ import QtQuick.Layouts 1.11
 import QtQuick.Controls 2.4
 import QtQuick.Controls.Material 2.4
 import QtCharts 2.2
+import QtQuick.Dialogs 1.0
 
 ApplicationWindow {
   id: mainWindow
@@ -104,31 +105,39 @@ ApplicationWindow {
             anchors.fill: parent
             columns: 3
             Label {
-                text: 'Train Dataset'
+                text: 'Folder with train files:'
                 Layout.alignment: Qt.AlignHCenter
             }
             TextField {
+                id: trainPath
                 width: parent.width
-                placeholderText: 'Train Data goes here...'
+                placeholderText: 'Path to train data folder...'
                 selectByMouse: true
             }
             RoundButton {
                 text: '...'
                 Layout.alignment: Qt.AlignHCenter
+                onClicked: () => {
+                    trainFileDialog.open()
+                }
             }
 
             Label {
-                text: 'Test Dataset'
+                text: 'Folder with test files:'
                 Layout.alignment: Qt.AlignHCenter
             }
             TextField {
+                id: testPath
                 width: parent.width
-                placeholderText: 'Test Data goes here...'
+                placeholderText: 'Path to test data folder...'
                 selectByMouse: true
             }
             RoundButton {
                 text: '...'
                 Layout.alignment: Qt.AlignHCenter
+                onClicked: () => {
+                    testFileDialog.open()
+                }
             }
         }
       }
@@ -430,6 +439,38 @@ ApplicationWindow {
         Label { text: 'The standard dialog.' }
         footer: DialogButtonBox {
           standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
+        }
+      }
+
+      FileDialog {
+        id: trainFileDialog
+        title: "Choose a folder..."
+        selectFolder: true
+        selectMultiple: false
+        folder: shortcuts.home
+        onAccepted: {
+            var path = trainFileDialog.fileUrl.toString()
+            // reomve prefix "file:///"
+            path = path.replace(/^(file:\/{3})/,"")
+            // unescape HTML codes
+            var cleanPath = decodeURIComponent(path);
+            trainPath.text = cleanPath
+        }
+      }
+
+      FileDialog {
+        id: testFileDialog
+        title: "Choose a folder..."
+        selectFolder: true
+        selectMultiple: false
+        folder: shortcuts.home
+        onAccepted: {
+            var path = testFileDialog.fileUrl.toString()
+            // reomve prefix "file:///"
+            path = path.replace(/^(file:\/{3})/,"")
+            // unescape HTML codes
+            var cleanPath = decodeURIComponent(path);
+            testPath.text = cleanPath
         }
       }
     }
