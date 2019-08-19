@@ -70,7 +70,7 @@ class EpochBridge(QObject):
 class SettingsBridge(QObject):
     def __init__(self, parent=None):
         super(SettingsBridge, self).__init__(parent)
-        self._epochs = 5
+        self._epochs = 0
 
     epochs_changed = Signal(int, name='epochs_changed')
 
@@ -133,6 +133,9 @@ for name in bridges:
 
 # Load the qml file into the engine
 engine.load(QUrl('res/qml/main.qml'))
+
+# initialize values
+bridges['settings_bridge'].set_epochs(5)
 
 # Qml file error handling
 if not engine.rootObjects():
