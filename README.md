@@ -1,5 +1,7 @@
 # Example for a Neural Network GUI using PySide2
 
+> Still a work in progress! Tested for Python 3.6 and 3.7
+
 Install requirements by navigating to the root directory of the project and running:
 ``` sh
 pip install -r requirements.txt
