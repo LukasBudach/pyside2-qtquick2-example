@@ -1,11 +1,12 @@
 <!DOCTYPE RCC><RCC version="1.0">
-<qresource>
-    <file>res/qml/main.qml</file>
-    <file>res/qml/CellBox.qml</file>
-    <file>res/qml/LargeChartView.qml</file>
-    <file>res/qml/SideNavButton.qml</file>
-    <file>res/images/baseline-category-24px.svg</file>
-    <file>res/images/baseline-menu-24px.svg</file>
-    <file>res/images/baseline-more_vert-24px.svg</file>
-</qresource>
+    <qresource>
+        <file>res/qml/qtquickcontrols2.conf</file>
+        <file>res/qml/main.qml</file>
+        <file>res/qml/CellBox.qml</file>
+        <file>res/qml/LargeChartView.qml</file>
+        <file>res/qml/SideNavButton.qml</file>
+        <file>res/images/baseline-category-24px.svg</file>
+        <file>res/images/baseline-menu-24px.svg</file>
+        <file>res/images/baseline-more_vert-24px.svg</file>
+    </qresource>
 </RCC>

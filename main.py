@@ -106,9 +106,13 @@ class ControlBridge(QObject):
             self.epoch_done.emit(self.epoch_bridge.epoch, self.epoch_bridge.test_loss)
             self.log_event.emit('Epoch ' + str(i) + ' done')
 
-# Set the QtQuick Style
-# Acceptable values: Default, Fusion, Imagine, Material, Universal.
-os.environ['QT_QUICK_CONTROLS_STYLE'] = "Material"
+
+# Set the QtQuick configuration file path
+os.environ['QT_QUICK_CONTROLS_CONF'] = "res/qml/qtquickcontrols2.conf"
+
+# Need to set an organization name in order to suppress warning thrown
+# see https://forum.qt.io/topic/104546/qml-file-dialog-warning
+QCoreApplication.setOrganizationName("Some organization")
 
 # Create an instance of the application
 # QApplication MUST be declared in global scope to avoid segmentation fault
