@@ -2,8 +2,8 @@ import QtQuick 2.13
 import QtQuick.Layouts 1.11
 import QtQuick.Controls 2.4
 import QtQuick.Controls.Material 2.4
-import QtCharts 2.2
 import QtQuick.Dialogs 1.0
+import QtQuick.Controls.Styles 1.4
 
 import "components"
 import "pages"
@@ -21,7 +21,7 @@ ApplicationWindow {
     signal consolereemitted(string log)
 
     Component.onCompleted: {
-        control_bridge.log_event.connect(mainWindow.consolereemitted)
+        console_stream.event_logged.connect(mainWindow.consolereemitted)
     }
 
     onConsolereemitted: {
@@ -107,12 +107,12 @@ ApplicationWindow {
                 ScrollView {
                     anchors.fill: parent
                     TextArea {
-                        anchors.fill: parent
                         id: consoleTextfield
                         placeholderText: "Console output..."
                         selectByMouse: true
                         persistentSelection: true
                         readOnly: true
+                        wrapMode: Text.WordWrap
                     }
                 }
             }

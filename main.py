@@ -3,11 +3,32 @@ import sys
 
 import time
 import math
+from io import StringIO
 
 from PySide2.QtCore import QUrl, QObject, Signal, Slot, Property, QCoreApplication
 from PySide2.QtWidgets import QApplication
 from PySide2.QtQml import QQmlApplicationEngine
 from res import resources  # load res built by pyrcc5
+
+
+class StringBuffer(StringIO):
+    def __init__(self, init_string=""):
+        super(StringBuffer, self).__init__(init_string)
+        self.notifier = self.Notifier()
+
+    class Notifier(QObject):
+        def __init__(self, parent=None):
+            super(StringBuffer.Notifier, self).__init__(parent)
+
+        event_logged = Signal(str, name='event_logged')
+
+        def emit_string(self, s):
+            if not s == '\n':
+                self.event_logged.emit(s)
+
+    def write(self, s):
+        super(StringBuffer, self).write(s)
+        self.notifier.emit_string(s)
 
 
 class EpochBridge(QObject):
@@ -91,7 +112,6 @@ class ControlBridge(QObject):
         self.settings_bridge = settings_bridge
 
     epoch_done = Signal(int, float, name='epoch_done')
-    log_event = Signal(str, name='log_event')
 
     @Slot()
     def start_simulation(self):
@@ -104,7 +124,7 @@ class ControlBridge(QObject):
             self.epoch_bridge.test_accuracy = min((i*i) * 3.978, 100)
             self.epoch_bridge.test_loss = 1/i
             self.epoch_done.emit(self.epoch_bridge.epoch, self.epoch_bridge.test_loss)
-            self.log_event.emit('This is gonna be a longer Log message. Epoch ' + str(i) + ' done')
+            print('This is gonna be a longer Log message. Epoch ' + str(i) + ' done')
 
 
 # Set the QtQuick configuration file path
@@ -118,6 +138,10 @@ QCoreApplication.setOrganizationName("Some organization")
 # QApplication MUST be declared in global scope to avoid segmentation fault
 app = QApplication(sys.argv)
 
+console_stream = StringBuffer()
+sys.stdout = console_stream
+
+
 # Create QML engine
 engine = QQmlApplicationEngine()
 
@@ -127,6 +151,7 @@ bridges = {
 }
 
 bridges['control_bridge'] = ControlBridge(epoch_bridge=bridges['epoch_bridge'], settings_bridge=bridges['settings_bridge'])
+bridges['console_stream'] = console_stream.notifier
 
 for name in bridges:
     engine.rootContext().setContextProperty(name, bridges[name])
