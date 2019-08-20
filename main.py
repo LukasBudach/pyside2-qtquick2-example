@@ -104,7 +104,7 @@ class ControlBridge(QObject):
             self.epoch_bridge.test_accuracy = min((i*i) * 3.978, 100)
             self.epoch_bridge.test_loss = 1/i
             self.epoch_done.emit(self.epoch_bridge.epoch, self.epoch_bridge.test_loss)
-            self.log_event.emit('Epoch ' + str(i) + ' done')
+            self.log_event.emit('This is gonna be a longer Log message. Epoch ' + str(i) + ' done')
 
 
 # Set the QtQuick configuration file path
